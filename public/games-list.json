@@ -1,0 +1,87 @@
+[
+  {
+    "id": "1",
+    "name": "Karaoke",
+    "image": "/karaoke.jpg",
+    "rules": "Grab the mic, sing with passion, and enjoy the moment. It's that simple.",
+    "points": "Your points are based on how well you sing."
+  },
+  {
+    "id": "2",
+    "name": "Cards Against Humanity",
+    "image": "/cahumanity.jpg",
+    "rules": "Pick the funniest card combo to win. No limits. Get ready to laugh hard.",
+    "points": "Points for the most hilarious pairings."
+  },
+
+  {
+    "id": "4",
+    "name": "Hot Seat",
+    "image": "/hotseat.jpg",
+    "rules": "Answer personal questions while others guess your responses. Be honest!",
+    "points": "Points for correct guesses and honesty."
+  },
+  {
+    "id": "5",
+    "name": "Monopoly",
+    "image": "/monopoly.jpg",
+    "rules": "Buy, trade, and build to bankrupt your opponents. Strategy is key!",
+    "points": "Points for money, properties, and strategy."
+  },
+  {
+    "id": "6",
+    "name": "UNO",
+    "image": "/uno.jpg",
+    "rules": "Match colors and numbers, use action cards to beat your opponents.",
+    "points": "First to empty their hand wins the points."
+  },
+  {
+    "id": "7",
+    "name": "WHAT DO YOU MEME",
+    "image": "/whatdoyoumeme.webp",
+    "rules": "Pair captions with images to create the funniest meme. Let the laughs roll.",
+    "points": "Points for the most hilarious meme."
+  },
+  {
+    "id": "8",
+    "name": "TELL ME WITHOUT TELLING ME",
+    "image": "/tellmewithouttellingme.jpg",
+    "rules": "Get your team to guess the word without saying it directly. Be creative.",
+    "points": "Points for the most accurate guesses."
+  },
+  {
+    "id": "9",
+    "name": "LUDO",
+    "image": "/ludo.jpeg",
+    "rules": "Move all your pieces around the board to the finish line. Race to win!",
+    "points": "Points for each piece safely home."
+  },
+  {
+    "id": "10",
+    "name": "SCRABBLE",
+    "image": "/scrabble.jpg",
+    "rules": "Form words with letter tiles to score points. The longer, the better.",
+    "points": "Points based on the value of letters used."
+  },
+  {
+    "id": "11",
+    "name": "CHESS",
+    "image": "/chess.jpg",
+    "rules": "Outsmart your opponent to checkmate their king. Think ahead and win.",
+    "points": "Points for capturing pieces and winning."
+  },
+  {
+    "id": "12",
+    "name": "LETS GO DEEP",
+    "image": "/letsgo.webp",
+    "rules": "Answer personal questions to get to know each other on a deeper level.",
+    "points": "Points for honesty and engagement."
+  },
+  {
+    "id": "3",
+    "name": "XXX",
+    "image": "/xxx.jpg",
+    "rules": "Get creative and let your imagination run wild with this game.",
+    "points": "Earn points for the most inventive answers."
+  }
+]

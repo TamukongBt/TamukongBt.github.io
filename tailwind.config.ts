@@ -18,7 +18,23 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Josefin Sans", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+        display: ["Bebas Neue", "sans-serif"],
+        body: ["Source Sans Pro", "sans-serif"],
+        heading: ["Monoton", "sans-serif"],
+      },
+
       colors: {
+        darkpurple: "hsl(var(--darkpurple))",
+        brownpurple: "hsl(var(--brownpurple))",
+        blueishpurple: "hsl(var(--blueishpurple))",
+        lightpurple: "hsl(var(--lightpurple))",
+        neonpurple: "hsl(var(--neonpurple))",
+        whiteout: "hsl(var(--whiteout))",
+
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
