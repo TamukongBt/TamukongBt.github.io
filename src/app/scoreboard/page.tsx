@@ -95,6 +95,7 @@ export default function Scoreboard() {
 
             <div className="grid md:!grid-cols-4  sm:!grid-cols-1  md:space-x-2 md:space-y-0 sm:space-x-0 sm:space-y-2  ">
                 {Object.entries(mappedScores).map(([groupId, score]) => (
+                    
                     <div className='border border-neonpurple rounded-md !my-2 md:!my-none text-center p-5' key={groupId}>
                         <div className="text-[0.5em] uppercase text-center tracking-[0.7em] font-sans">Score</div>
                         <div className=' font-display bg-gradient-to-r from-lightpurple to-pink-700 text-transparent bg-clip-text text-6xl sm:text-4xl'> {score.total}</div>
