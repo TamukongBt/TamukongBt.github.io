@@ -44,7 +44,7 @@ export default function Home() {
           >
             <Link href="/new-player">
               <Button className="font-display bg-lightpurple border uppercase text-2xl tracking-widest  hover:bg-purple-800 my-3 text-white hover:text-black border-white hover:border-black mt-5 py-2 px-4 rounded-md  focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                Let's Begin
+                Let&apos; s Begin
               </Button>
             </Link>
           </FlipClockCountdown>
