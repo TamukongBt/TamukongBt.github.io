@@ -40,7 +40,7 @@ export default function Scoreboard() {
     const { loading, error, data, refetch } = useQuery(GET_GAMES);
     const [updatePoints] = useMutation(UPDATE_POINTS);
     const [points, setPoint] = useState(0);
-    const [selectedGroup, setSelectedGroup] = useState(null);
+    const [selectedGroup, setSelectedGroup] = useState<null | string>(null);
     const [inputValue, setInputValue] = useState(0);
 
     const handleUpdatePoints = async () => {
@@ -107,21 +107,12 @@ export default function Scoreboard() {
                 <div className="flex flex-col mb-4">
                     <div className="flex">
 
-                        <Select onValueChange={(value) => setSelectedGroup(value)}>
-                            <SelectTrigger className="shadow-sm rounded-md border border-gray-300 px-3  bg-darkpurple py-2 focus:outline-none focus:ring focus:ring-blue-500  rounded-r-none focus:ring-opacity-1 w-[180px]">
-                                <SelectValue placeholder="Groups" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                {data.groups.map((group: any) => (
-                                    <SelectItem value={group.id}>{group.name}</SelectItem>
-                                ))}
-                            </SelectContent>
-                        </Select>
                         <Input
                             placeholder="Enter Team Points"
                             type="number"
                             value={inputValue}
                             onChange={(e) => setInputValue(Number(e.target.value))}
+                            key={selectedGroup} 
                             className="shadow-sm rounded-md border border-gray-300 px-3  bg-darkpurple py-2 focus:outline-none focus:ring focus:ring-blue-500  rounded-l-none focus:ring-opacity-10"
                         />
                     </div>
