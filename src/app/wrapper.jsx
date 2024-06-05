@@ -10,7 +10,7 @@ import {
 
 function makeClient() {
   const httpLink = new HttpLink({
-    uri: "http://localhost:4000/api/graphql",
+    uri: "https://nightout-be.up.railway.app/api/graphl/",
     fetchOptions: { cache: "no-store" },
   });
 
