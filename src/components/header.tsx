@@ -1,3 +1,4 @@
+import { Atom } from "lucide-react";
 import Link from "next/link";
 
 const Header = () => {
@@ -11,8 +12,8 @@ const Header = () => {
 
                     <div className="flex items-center gap-4">
                         <Link href="/credits" >
-                            <div className="bg-gradient-to-r from-lightpurple to-pink-700 sm:!w-3 md:w-3 h-7 text-sm md:px-16 px-[1.4em]  rounded-lg">
-
+                            <div className="bg-gradient-to-r from-lightpurple to-pink-700 sm:!w-3 md:w-3 text-sm md:px-16 px-[1.4em] rounded-lg py-auto">
+                                <Atom className="text-white" /> 
                             </div>
                         </Link>
                         <div className="text-white font-sans pl-2 sm:!pl-0 md:text-4xl sm:text-md  rounded-lg tracking-[0.2em]">

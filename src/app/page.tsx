@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import { Dice3, Martini, Popcorn } from "lucide-react";
+import { Dice3, Instagram, Martini, MessageCircleMore, Phone, Popcorn } from "lucide-react";
 import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown';
 import '@leenguyen/react-flip-clock-countdown/dist/index.css';
 import Link from "next/link";
@@ -24,7 +24,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-[10vh] location text-md font-light text-center">
+        <div className="mt-[5vh] location text-md font-light text-center">
           <div className="text-lg font-display uppercase text-fuchsia-700"> Join Us </div>
           <div className="text-white text-sm uppercase"> Bar Opens At 8PM</div>
           <div className="text-white text-sm uppercase"> Klass Chill, Tarred Malingo , Buea</div>
@@ -44,14 +44,29 @@ export default function Home() {
           >
             <Link href="/new-player">
               <Button className="font-display bg-lightpurple border uppercase text-2xl tracking-widest  hover:bg-purple-800 my-3 text-white hover:text-black border-white hover:border-black mt-5 py-2 px-4 rounded-md  focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                Let&apos; s Begin
+                Let&apos;s Begin
               </Button>
             </Link>
           </FlipClockCountdown>
 
         </div>
 
-        <div className="mt-[5vh] location text-md font-light text-center">
+        <div className="flex flex-col justify-center">
+          <h2 className="font-body uppercase text-[0.9em] tracking-[0.5em]">Reserve Now</h2>
+          <h2 className="font-display text-center text-lg">+237 654855007</h2>
+          <div className="flex justify-center space-x-4 my-2 text-gray-600 ">
+            <Link href="https://wa.me/654855007" className="text-2xl">
+              <Phone className="text-2xl" />
+            </Link>
+            <Link href="https://wa.me/654855007" className="text-2xl">
+              <MessageCircleMore className="text-2xl" />
+            </Link>
+
+          </div>
+        </div>
+
+
+        <div className="mt-[1em] location text-md font-light text-center">
           <div className="text-lg font-display uppercase text-fuchsia-700"> Whats On The Menu </div>
         </div>
         <div className="flex space-x-7">

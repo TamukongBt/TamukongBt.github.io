@@ -23,13 +23,13 @@ const Credits = () => {
 
 
                 <div className="flex justify-center space-x-4 my-2 text-gray-600 ">
-                    <Link href="/instagram" className="text-2xl">
+                    <Link href="#" className="text-2xl">
                         <Instagram className="text-2xl" />
                     </Link>
-                    <Link href="https://www.whatsapp.com" className="text-2xl">
+                    <Link href="https://wa.me/651076194" className="text-2xl">
                         <MessageCircleMore className="text-2xl" />
                     </Link>
-                    <Link href="https://www.whatsapp.com" className="text-2xl">
+                    <Link href="mailto:adoniscreates@gmail.com" className="text-2xl">
                         <Mail className="text-2xl" />
                     </Link>
                 </div>
