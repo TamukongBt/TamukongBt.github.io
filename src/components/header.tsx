@@ -1,50 +1,22 @@
-import { Button } from "@/components/ui/button"
-
-import {
-    DropdownMenu,
-    DropdownMenuCheckboxItem,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
 
 const Header = () => {
 
     return (
         <div className=" w-full md:!h-auto   border-b border-gray-500 bg-darkpurple">
-            <header className="sticky top-0 z-30 flex !h-14 items-center gap-4 border-b bg-darkpurple px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+            <header className="sticky top-0 z-30 flex justify-center !h-14 items-center gap-4 border-b bg-darkpurple px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
 
+                <div className="text-center flex ">
+                    <div className="text-white font-heading pr-2  md:text-3xl sm:text-md rounded-lg tracking-[0.2em]">COCKTAIL</div>
 
+                    <div className="flex items-center gap-4">
+                        <div className="bg-gradient-to-r from-lightpurple to-pink-700  w-3 h-7 text-sm px-16 rounded-lg">
 
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button
-                            variant="outline"
-                            size="icon"
-                            className="overflow-hidden rounded-full"
-                        >
-                            {/* <Image
-          src="/placeholder-user.jpg"
-          width={36}
-          height={36}
-          alt="Avatar"
-          className="overflow-hidden rounded-full"
-        /> */}
-                            YAYA
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>Settings</DropdownMenuItem>
-                        <DropdownMenuItem>Support</DropdownMenuItem>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>Logout</DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
+                        </div>
+                        <div className="text-white font-sans pl-2 md:text-4xl sm:text-md  rounded-lg tracking-[0.2em]">
+                            NIGHTOUT
+                        </div>
+                    </div>
+                </div>
             </header>
         </div>
     );

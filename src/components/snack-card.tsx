@@ -50,7 +50,7 @@ const SnackCard: React.FC<SnackCardProps> = ({ id, name, image, details, plug })
     };
 
     // split profile string to array and map through it to display each profile
-    
+
 
 
 
@@ -75,11 +75,13 @@ const SnackCard: React.FC<SnackCardProps> = ({ id, name, image, details, plug })
                                     <Image src={image} alt={name} height={450} width={500} className=' !w-full !h-full object-top rounded-md object-cover' />
                                 </AspectRatio>
                                 <div className='text-whiteout'>
-                                    <h2 className=" text-2xl font-bold my-2">{name}</h2>
+                                    <h2 className=" text-2xl  font-display tracking-wider my-2">{name}</h2>
                                     {/* <Separator /> */}
-                                    <p className='mb-3'>{details}</p>
-                                    <div className="italic mb-2 font-bold text-grey-400"> {plug} </div>
+                                    <p className='font-light leading-6 text-justify'>{details}</p>
+                                    <div className="font-display text-2xl my-2 uppercase font-light bg-gradient-to-r from-purple-500 to-pink-700 text-transparent bg-clip-text tracking-wider"> {plug} </div>
                                 </div>
+                                {/* <Separator className='w-40  my-2'/> */}
+                                <div className="text-center justify text-[0.6em] mt-4 lowercase">Not all snacks will serve as depicted in this image</div>
 
                             </div>
                         </DialogDescription>
@@ -105,12 +107,15 @@ const SnackCard: React.FC<SnackCardProps> = ({ id, name, image, details, plug })
                         <AspectRatio ratio={16 / 9}>
                             <Image src={image} alt={name} height={450} width={500} className=' !w-full !h-full rounded-md  object-top object-cover' />
                         </AspectRatio>
-                        <div className='pb-8 text-whiteout'>
-                            <h2 className=" text-2xl font-bold my-2">{name}</h2>
+                        <div className='text-whiteout'>
+                            <h2 className=" text-2xl  font-display tracking-wider my-2">{name}</h2>
                             {/* <Separator /> */}
-                            <p className='mb-3'>{details}</p>
-                            <div className="italic mb-2 font-bold text-grey-400 text-sm"> {plug} </div>
+                            <p className='font-light leading-6 text-justify'>{details}</p>
+                            <div className="font-display text-2xl my-2 uppercase font-light bg-gradient-to-r from-purple-500 to-pink-700 text-transparent bg-clip-text tracking-wider"> {plug} </div>
                         </div>
+                        {/* <Separator className='w-40  my-2'/> */}
+                        <div className="text-center justify text-[0.6em] my-4 lowercase">Not all snacks will serve as depicted in this image</div>
+
                     </div>
                 </DrawerContent>
             </Drawer>

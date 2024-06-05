@@ -1,60 +1,37 @@
-// pages/index.tsx or any other page/component
-import React from 'react';
-
+"use client"
+import React, { useEffect, useState } from 'react';
 import SnackCard from '@/components/snack-card';
 
-const snacks = [
-    {
-        id: '1',
-        name: 'Meat Pies',
-        image: '/meatpies.jpg',
-        details: 'A savory pastry filled with seasoned ground beef and vegetables.',
-        plug: 'CK Cakes: 651076194'
-    },
-    {
-        id: '2',
-        name: 'Cakes',
-        image: '/cakes.jpeg',
-        details: 'A sweet treat made with flour, sugar, and butter, and baked in an oven.',
-        plug: 'TB Cakes: 651076194'
-    },
-    {
-        id: '3',
-        name: 'Popcorn',
-        image: '/popcorn.jpg',
-        details: 'A light and fluffy snack made from corn kernels that are heated until they burst open.',
-        plug: 'TB Cakes: 651076194'
-    },
-    {
-        id: '4',
-        name: 'Chin Chin',
-        image: '/chinchin.webp',
-        details: 'A sweet, crunchy snack made from flour, sugar, and butter, and deep-fried until golden brown.',
-        plug: 'TB Cakes: 651076194'
-    },
-    {
-        id: '4',
-        name: 'Groundnuts',
-        image: '/gnuts.webp',
-        details: 'A crunchy snack made from roasted peanuts that are seasoned with salt and spices.',
-        plug: 'TB Cakes: 651076194'
-    }
 
-    // Add more snacks as needed
-];
 
 const Snacks = () => {
+    const [chops, setChop] = useState([]);
+
+    useEffect(() => {
+        fetch('/chops-list.json')
+            .then(response => response.json())
+            .then(chop => setChop(chop));
+    }, []);
+
+    if (chops.length === 0) {
+        return (
+            <div className="font-sans uppercase tracking-wider text-whiteout text-center mt-4 w-full p-5">
+                No chops available
+            </div>
+        );
+    }
+
     return (
         <div className="font-body text-whiteout w-full p-5">
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                {snacks.map((snack) => (
+                {chops.map((chop:any) => (
                     <SnackCard
-                        key={snack.id}
-                        id={snack.id}
-                        name={snack.name}
-                        image={snack.image}
-                        details={snack.details}
-                        plug={snack.plug}
+                        key={chop.id}
+                        id={chop.id}
+                        name={chop.name}
+                        image={chop.image}
+                        details={chop.details}
+                        plug={chop.plug}
                     />
                 ))}
             </div>

@@ -4,6 +4,7 @@ import {
   Dice3,
   Home,
   Martini,
+  PencilLine,
   Popcorn,
   Settings,
 } from "lucide-react"
@@ -45,7 +46,7 @@ export function SideBar() {
           <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
             <Link
               href="/"
-              className={`group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg ${route == '/' ? 'bg-white text-black' : ''} font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base`}
+              className={`group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg ${route == '/' ? 'bg-white !text-black' : ''} font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base`}
             >
               <Home className="h-4 w-4 transition-all group-hover:scale-110" />
               <span className="sr-only">Adonis Inc</span>
@@ -97,11 +98,11 @@ export function SideBar() {
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-lightpurple md:h-8 md:w-8"
                 >
-                  <Settings className="h-5 w-5" />
-                  <span className="sr-only">Settings</span>
+                  <PencilLine className="h-5 w-5" />
+                  <span className="sr-only">Credits</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Settings</TooltipContent>
+              <TooltipContent side="right">Credits</TooltipContent>
             </Tooltip>
           </nav>
         </aside>

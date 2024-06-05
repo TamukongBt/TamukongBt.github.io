@@ -52,7 +52,7 @@ const CocktailCard: React.FC<CocktailCardProps> = ({ id, name, image, details, p
     // split profile string to array and map through it to display each profile
     const profileArray = profile.split(',');
     const profileList = profileArray.map((profile, index) => (
-        <span key={index} className="mr-1 text-sm bg-whiteout px-2 rounded-sm text-black  font-bold text-grey-400">
+        <span key={index} className="mr-1 text-sm bg-neonpurple px-2 rounded-sm text-black  font-bold text-grey-400">
             {profile}
         </span>
     ));
@@ -80,12 +80,13 @@ const CocktailCard: React.FC<CocktailCardProps> = ({ id, name, image, details, p
                                     <Image src={image} alt={name} height={450} width={500} className=' !w-full !h-full object-top rounded-md object-cover' />
                                 </AspectRatio>
                                 <div className='text-whiteout'>
-                                    <h2 className=" text-2xl font-bold my-2">{name}</h2>
+                                    <h2 className=" text-2xl  font-display tracking-wider my-2">{name}</h2>
                                     {/* <Separator /> */}
-                                    <div className="italic mb-2 font-bold text-grey-400"> {profileList} </div>
-                                    <p className=''>{details}</p>
+                                    <div className="italic mb-2 text-grey-400 font uppercase font-light"> {profileList} </div>
+                                    <p className='font-light leading-6 text-justify'>{details}</p>
                                 </div>
-
+                                {/* <Separator className='w-40  my-2'/> */}
+                                <div className="text-center justify text-[0.6em] mt-4 lowercase">Not all drinks will serve as depicted in this image</div>
                             </div>
                         </DialogDescription>
                     </DialogHeader>
@@ -110,12 +111,14 @@ const CocktailCard: React.FC<CocktailCardProps> = ({ id, name, image, details, p
                         <AspectRatio ratio={16 / 9}>
                             <Image src={image} alt={name} height={450} width={500} className=' !w-full !h-full rounded-md  object-top object-cover' />
                         </AspectRatio>
-                        <div className='pb-8 text-whiteout'>
-                            <h2 className=" text-2xl font-bold my-2">{name}</h2>
+                        <div className='text-whiteout'>
+                            <h2 className=" text-2xl  font-display tracking-wider my-2">{name}</h2>
                             {/* <Separator /> */}
-                            <div className="italic mb-2 font-bold text-grey-400"> {profileList} </div>
-                            <p className=''>{details}</p>
+                            <div className="italic mb-2 text-grey-400 font uppercase font-light"> {profileList} </div>
+                            <p className='font-light leading-6 text-justify'>{details}</p>
                         </div>
+                        {/* <Separator className='w-40  my-2'/> */}
+                        <div className="text-center justify text-[0.6em] my-4 lowercase">Not all drinks will serve as depicted in this image</div>
                     </div>
                 </DrawerContent>
             </Drawer>

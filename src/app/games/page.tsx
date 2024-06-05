@@ -1,32 +1,32 @@
-// pages/index.tsx or any other page/component
-import React from 'react';
+"use client"
+import React, { useEffect, useState } from 'react';
 
 import GameCard from '@/components/game-card';
 
 const games = [
-    {
-        id: '1',
-        name: 'karaoke',
-        image: '/karaoke.jpg',
-        rules: 'You take the Mic and You sing like you love it its that simple',
-        points: 'Your points are based on how well you sing'
-    },
-    {
-        id: '2',
-        name: 'Cards Against Humanity',
-        image: '/cahumanity.jpg',
-        rules: 'You take the floor and you dance like you love it its that simple',
-        points: 'Just do what it says or pay 500'
-    }
     
-    // Add more games as needed
 ];
 
 const Games = () => {
+    const [games, setGame] = useState([]);
+
+    useEffect(() => {
+        fetch('/games-list.json')
+            .then(response => response.json())
+            .then(game => setGame(game));
+    }, []);
+
+    if (games.length === 0) {
+        return (
+            <div className="font-sans uppercase tracking-wider text-whiteout text-center mt-4 w-full p-5">
+                No games available
+            </div>
+        );
+    }
     return (
         <div className="font-body text-whiteout w-full p-5">
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                {games.map((game) => (
+                {games.map((game:any) => (
                     <GameCard
                         key={game.id}
                         id={game.id}
