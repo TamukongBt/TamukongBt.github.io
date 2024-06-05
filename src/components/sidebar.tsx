@@ -6,24 +6,8 @@ import {
   Martini,
   PencilLine,
   Popcorn,
-  Settings,
 } from "lucide-react"
 
-
-import { Button } from "@/components/ui/button"
-
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
-import { Progress } from "@/components/ui/progress"
-import { Separator } from "@/components/ui/separator"
 
 
 import {
@@ -95,7 +79,7 @@ export function SideBar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="#"
+                  href="/credits"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-lightpurple md:h-8 md:w-8"
                 >
                   <PencilLine className="h-5 w-5" />

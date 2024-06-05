@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 const Header = () => {
 
@@ -9,10 +10,12 @@ const Header = () => {
                     <div className="text-white font-heading pr-2  md:text-3xl sm:text-md rounded-lg tracking-[0.2em]">COCKTAIL</div>
 
                     <div className="flex items-center gap-4">
-                        <div className="bg-gradient-to-r from-lightpurple to-pink-700  w-3 h-7 text-sm px-16 rounded-lg">
+                        <Link href="/credits" >
+                            <div className="bg-gradient-to-r from-lightpurple to-pink-700 sm:!w-3 md:w-3 h-7 text-sm md:px-16 px-[1.4em]  rounded-lg">
 
-                        </div>
-                        <div className="text-white font-sans pl-2 md:text-4xl sm:text-md  rounded-lg tracking-[0.2em]">
+                            </div>
+                        </Link>
+                        <div className="text-white font-sans pl-2 sm:!pl-0 md:text-4xl sm:text-md  rounded-lg tracking-[0.2em]">
                             NIGHTOUT
                         </div>
                     </div>
