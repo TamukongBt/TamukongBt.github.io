@@ -103,7 +103,7 @@ export default function Group() {
     <div>
       <div className="flex items-center !w-full flex-col container mx-auto px-4 py-8 !text-whiteout">
         <div className="div">
-          <h1 className="text-3xl mb-4 text-center font-light font-sans uppercase tracking-[0.6em]">Let's Play</h1>
+          <h1 className="text-3xl mb-4 text-center font-light font-sans uppercase tracking-[0.6em]">Let&apos;s Play</h1>
           <div className="flex flex-col mb-4">
             <Input
               type="text"

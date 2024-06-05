@@ -1,0 +1,1 @@
+echo "eslint --fix" > .husky/pre-commit
