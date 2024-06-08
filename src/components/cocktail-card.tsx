@@ -56,6 +56,11 @@ const CocktailCard: React.FC<CocktailCardProps> = ({ id, name, image, details, p
             {profile}
         </span>
     ));
+    const mobileprofileList = profileArray.map((profile, index) => (
+        <span key={index} className="mr-1 text-[0.7 em] bg-neonpurple px-2 rounded-sm text-black  font-bold text-grey-400">
+            {profile}
+        </span>
+    ));
 
 
 
@@ -63,9 +68,15 @@ const CocktailCard: React.FC<CocktailCardProps> = ({ id, name, image, details, p
         return (
             <Dialog onOpenChange={handleOpen}>
                 <DialogTrigger asChild>
-                    <div onClick={handleOpen} key={id} className="w-[100%]">
-                        <AspectRatio ratio={3 / 4}>
+                    <div onClick={handleOpen} key={id} className="w-[100%]  border-gray-600 rounded-md  cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-md ">
+                        <AspectRatio ratio={3 / 4} className='relative'>
                             <Image src={image} alt={name} height={450} width={500} className=' !w-full !h-full rounded-md object-cover' />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-end p-4 rounded-md">
+                                <div className='mb-8'>
+                                    <span className="text-white text-3xl font-display">{name}</span>
+                                    <div className="italic text-grey-400 font uppercase font-light"> {profileList} </div>
+                                </div>
+                            </div>
                         </AspectRatio>
                     </div>
                 </DialogTrigger>
@@ -97,9 +108,15 @@ const CocktailCard: React.FC<CocktailCardProps> = ({ id, name, image, details, p
 
     return (
         <>
-            <div onClick={handleOpen} key={id} className="w-[100%]">
-                <AspectRatio ratio={3 / 4}>
+            <div onClick={handleOpen} key={id} className="w-[100%] border border-gray-600 rounded-md  cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-md ">
+                <AspectRatio ratio={3 / 4} className='relative'>
                     <Image src={image} alt={name} height={450} width={500} className=' !w-full !h-full rounded-md object-cover' />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent flex items-end p-4 rounded-md">
+                        <div className='mb-4'>
+                            <span className="text-white text-lg font-display">{name}</span>
+                            <div className="italic !text-[0.8em] text-grey-400 font uppercase font-light"> {mobileprofileList} </div>
+                        </div>
+                    </div>
                 </AspectRatio>
             </div>
             <Drawer key={id} open={isOpen} onOpenChange={setIsOpen}>

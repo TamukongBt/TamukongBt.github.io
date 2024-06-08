@@ -58,9 +58,14 @@ const SnackCard: React.FC<SnackCardProps> = ({ id, name, image, details, plug })
         return (
             <Dialog onOpenChange={handleOpen}>
                 <DialogTrigger asChild>
-                    <div onClick={handleOpen} key={id} className="w-[100%]">
-                        <AspectRatio ratio={3 / 4}>
+                    <div onClick={handleOpen} key={id} className="w-[100%]  border-gray-600 rounded-md  cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-md ">
+                        <AspectRatio ratio={3 / 4} className='relative'>
                             <Image src={image} alt={name} height={450} width={500} className=' !w-full !h-full rounded-md object-cover' />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent flex items-end p-4 rounded-md">
+                                <div className='mb-4'>
+                                    <span className="text-white text-2xl font-display">{name}</span>
+                                </div>
+                            </div>
                         </AspectRatio>
                     </div>
                 </DialogTrigger>
@@ -93,9 +98,14 @@ const SnackCard: React.FC<SnackCardProps> = ({ id, name, image, details, plug })
 
     return (
         <>
-            <div onClick={handleOpen} key={id} className="w-[100%]">
+            <div onClick={handleOpen} key={id} className="w-[100%]  border-gray-600 rounded-md  cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-md ">
                 <AspectRatio ratio={3 / 4}>
                     <Image src={image} alt={name} height={450} width={500} className=' !w-full !h-full rounded-md object-cover' />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black  to-transparent flex items-end p-4 rounded-md">
+                        <div className='mb-4'>
+                            <span className="text-white text-2xl font-display">{name}</span>
+                        </div>
+                    </div>
                 </AspectRatio>
             </div>
             <Drawer key={id} open={isOpen} onOpenChange={setIsOpen}>
