@@ -10,7 +10,7 @@
     "lint": "next lint",
     "prepare": "husky",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@apollo/client": "^3.10.4",
