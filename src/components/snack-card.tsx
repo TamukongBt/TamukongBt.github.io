@@ -1,18 +1,15 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import {
     Drawer,
     DrawerContent,
     DrawerClose,
 } from '@/components/ui/drawer';
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Dialog, DialogTrigger, DialogContent, DialogHeader,  DialogDescription } from '@/components/ui/dialog';
 import { AspectRatio } from './ui/aspect-ratio';
 import Image from 'next/image';
 import { PanelBottomCloseIcon } from 'lucide-react';
-import { Button } from './ui/button';
-import { Separator } from './ui/separator';
 
 interface SnackCardProps {
     id: string;
@@ -69,11 +66,11 @@ const SnackCard: React.FC<SnackCardProps> = ({ id, name, image, details, plug })
                         </AspectRatio>
                     </div>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-[500px] bg-darkpurple">
+                <DialogContent className="sm:max-w-[500px] bg-eerieblack">
                     <DialogHeader>
                         <DialogDescription>
                             <div className="mt-3 px-2">
-                                <DrawerClose onClick={handleClose} className="absolute top-0 right-0 text-2xl font-bold m-4 z-30 rounded-md  bg-darkpurple text-whiteout">
+                                <DrawerClose onClick={handleClose} className="absolute top-0 right-0 text-2xl font-bold m-4 z-30 rounded-md  bg-eerieblack text-whiteout">
                                     {/* <PanelBottomCloseIcon className='w-[0.9em] text-whiteout' /> */}
                                 </DrawerClose>
                                 <AspectRatio ratio={16 / 9}>
@@ -109,9 +106,9 @@ const SnackCard: React.FC<SnackCardProps> = ({ id, name, image, details, plug })
                 </AspectRatio>
             </div>
             <Drawer key={id} open={isOpen} onOpenChange={setIsOpen}>
-                <DrawerContent className='mt-0 bg-darkpurple text-whiteout'>
+                <DrawerContent className='mt-0 bg-eerieblack text-whiteout'>
                     <div className="mt-4 px-8">
-                        <DrawerClose onClick={handleClose} className="absolute top-0 right-0 text-2xl font-bold m-4 z-30 rounded-lg p-2 bg-darkpurple text-whiteout">
+                        <DrawerClose onClick={handleClose} className="absolute top-0 right-0 text-2xl font-bold m-4 z-30 rounded-lg p-2 bg-eerieblack text-whiteout">
                             <PanelBottomCloseIcon className='text-whiteout' />
                         </DrawerClose>
                         <AspectRatio ratio={16 / 9}>

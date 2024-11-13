@@ -7,12 +7,22 @@
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
-    --darkpurple: 327, 73%, 1%;
+    /* CSS HSL */
+    --eerieblack: 45, 92%, 95%;
+    --lemonchiffon: 40, 15%, 45%;
+    --lemonchiffonlight: #fbf2c139;
+    --taupe: 42, 82%, 95%;
+    --bistre: 42, 82%, 95%;
+    --buff: hsl(22, 80%, 73%);
+    --brownsugar: 20, 52%, 84%;
+    --bittersweet: 10, 93%, 80%;
+    --bittersweetlight: #f96f5d23;
+
     --brownpurle: 317, 33%, 17%;
     --blueishpurple: 263, 36%, 19%;
     --lightpurple: 283, 56%, 34%;
     --neonpurple: 293, 100%, 37%;
-    --whiteout: 315, 11%, 98%;
+    --whiteout: 45, 11%, 18%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -43,6 +53,22 @@
   }
 
   .dark {
+    --eerieblack: 0, 0%, 10%;
+    --lemonchiffon: 51, 88%, 87%;
+    --lemonchiffonlight: #fbf2c139;
+    --taupe: 30, 26%, 22%;
+    --bistre: 18, 41%, 19%;
+    --buff: #cfa08c;
+    --brownsugar: 15, 47%, 54%;
+    --bittersweet: 7, 93%, 67%;
+    --bittersweetlight: #f96f5d23;
+
+    --brownpurle: 317, 33%, 17%;
+    --blueishpurple: 263, 36%, 19%;
+    --lightpurple: 283, 56%, 34%;
+    --neonpurple: 293, 100%, 37%;
+    --whiteout: 315, 11%, 98%;
+
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -80,5 +106,21 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    -webkit-overflow-scrolling: touch; /* Safari */
+    overflow: -moz-scrollbars-none; /* Old Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    /* Firefox */
   }
 }

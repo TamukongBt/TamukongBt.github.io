@@ -1,28 +1,34 @@
-import { Atom } from "lucide-react";
 import Link from "next/link";
 
 const Header = () => {
 
     return (
-        <div className=" w-full md:!h-auto   border-b border-gray-500 bg-darkpurple">
-            <header className="sticky top-0 z-30 flex justify-center !h-14 items-center gap-4 border-b bg-darkpurple px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+        <header className="sticky top-0 z-30  !w-full justify-between flex md:hidden pl-4 !h-14 border border-lemonchiffon bg-eerieblack sm:static sm:h-auto  ">
 
-                <div className="text-center flex ">
-                    <div className="text-white font-heading pr-2  md:text-3xl sm:text-md rounded-lg tracking-[0.2em]">COCKTAIL</div>
-
-                    <div className="flex items-center gap-4">
-                        <Link href="/credits" >
-                            <div className="bg-gradient-to-r from-lightpurple to-pink-700 sm:!w-3 md:w-3 text-sm md:px-16 px-[1.4em] rounded-lg py-auto">
-                                <Atom className="text-white" /> 
-                            </div>
-                        </Link>
-                        <div className="text-white font-sans pl-2 sm:!pl-0 md:text-4xl sm:text-md  rounded-lg tracking-[0.2em]">
-                            NIGHTOUT
-                        </div>
+            <div className="grid grid-cols-3 space-x-3 text-lemonchiffon font-sans pr-2  font-light sm:text-md rounded-lg ">
+                <Link href="/" className="flex items-center ">
+                    <div className="mx-auto items-center hover:border-b-2">
+                       My Work
                     </div>
-                </div>
-            </header>
-        </div>
+                </Link>
+                <Link href="/" className="flex items-center">
+                    <div className="mx-auto items-center hover:border-b-2">
+                        About
+                    </div>
+                </Link>
+                <Link href="/" className="flex items-center">
+                    <div className="mx-auto items-center hover:border-b-2">
+                        Thoughts
+                    </div>
+                </Link>
+            </div>
+
+            <div className=" bg-lemonchiffon font-bold font-display capitalize">
+                <Link href="/" className="px-4 text-2xl text-bittersweet leading-3 my-auto flex align-middle items-center h-full">
+                    TB
+                </Link>
+            </div>
+        </header>
     );
 }
 

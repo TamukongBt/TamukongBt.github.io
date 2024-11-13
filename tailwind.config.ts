@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,21 +19,37 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["Josefin Sans", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
-        display: ["Bebas Neue", "sans-serif"],
-        body: ["Source Sans Pro", "sans-serif"],
-        heading: ["Monoton", "sans-serif"],
+        sans: ["Figtree", "serif"],
+        mono: ["Passion One", "sans-serif"],
+        display: ["Passion One", "sans-serif"],
+        body: ["League Spartan", "serif"],
+        heading: ["Bebas Neue", "sans-serif"],
+        design: ["Yanone Kaffeesatz", "serif"],
+        serif: ["Prata", "serif"],
+        script: ["Doto","sans-serif"],
+        cursive: ["Caesar Dressing", "cursive"],
+        italic: ["Chokokutai", "cursive"],
+        console: ["Ubuntu Mono", "monospace"],
+        old1: ["Tiny5", "sans-serif"],
+        black: ["Monoton", "cursive"],
+        child: ["Mynerve", "sans-serif"],
+        old: ["Pirata One", "cursive"],
       },
-
       colors: {
-        darkpurple: "hsl(var(--darkpurple))",
         brownpurple: "hsl(var(--brownpurple))",
         blueishpurple: "hsl(var(--blueishpurple))",
         lightpurple: "hsl(var(--lightpurple))",
         neonpurple: "hsl(var(--neonpurple))",
         whiteout: "hsl(var(--whiteout))",
-
+        lemonchiffonlight: "var(--lemonchiffonlight)",
+        lemonchiffon: "hsl(var(--lemonchiffon))",
+        taupe: "hsl(var(--taupe))",
+        bistre: "hsl(var(--bistre))",
+        buff: "var(--buff)",
+        brownsugar: "hsl(var(--brownsugar))",
+        bittersweet: "hsl(var(--bittersweet))",
+        bittersweetlight: "var(--bittersweetlight)",
+        eerieblack: "hsl(var(--eerieblack))",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -68,6 +84,23 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+
+        dark: {
+          brownpurple: "hsl(var(--brownpurple))",
+          blueishpurple: "hsl(var(--blueishpurple))",
+          lightpurple: "hsl(var(--lightpurple))",
+          neonpurple: "hsl(var(--neonpurple))",
+          whiteout: "hsl(var(--whiteout))",
+          lemonchiffonlight: "var(--lemonchiffonlight)",
+          lemonchiffon: "hsl(var(--lemonchiffon))",
+          taupe: "hsl(var(--taupe))",
+          bistre: "hsl(var(--bistre))",
+          buff: "var(--buff)",
+          brownsugar: "hsl(var(--brownsugar))",
+          bittersweet: "hsl(var(--bittersweet))",
+          bittersweetlight: "var(--bittersweetlight)",
+          eerieblack: "hsl(var(--eerieblack))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -91,6 +124,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

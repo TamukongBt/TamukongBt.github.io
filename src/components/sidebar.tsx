@@ -1,11 +1,13 @@
 "use client"
 import Link from "next/link"
 import {
-  Dice3,
+  BriefcaseBusiness,
   Home,
-  Martini,
+  Moon,
+  Newspaper,
+  Palette,
   PencilLine,
-  Popcorn,
+  Sun,
 } from "lucide-react"
 
 
@@ -17,60 +19,95 @@ import {
   TooltipProvider,
 } from "@/components/ui/tooltip"
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from "react";
 
 export function SideBar() {
   const route = usePathname();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const theme = localStorage.getItem('theme');
+      const isDark = theme === 'dark';
+      setIsDarkMode(isDark);
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  }, []);
+
+ 
+ 
+  const toggleTheme = () => {
+  
+    // removefromLocalStorage
+    localStorage.removeItem('theme');
+    // storeIn storage 
+    localStorage.setItem('theme', !isDarkMode ? 'dark' : 'light');
+    document.documentElement.classList.toggle('dark', !isDarkMode);
+    setIsDarkMode(!isDarkMode);
+  };
+
+
   return (
     <>
 
       <TooltipProvider>
         {/* place menubar  at bottom of screen at all times  */}
 
-        <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-gray-500 border-r  pt-16 bg-darkpurple sm:flex">
+        <aside className=" z-10 hidden w-14 flex-col border-lemonchiffon border h-[98vh] bg-eerieblack sm:flex">
+          <div className=" bg-lemonchiffon h-[3.5rem] py-2 font-bold font-display capitalize">
+            <Link href="/" className="px-4 text-2xl text-bittersweet leading-3 my-auto flex align-middle items-center h-full">
+              TB
+            </Link>
+          </div>
           <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
+
             <Link
               href="/"
-              className={`group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg ${route == '/' ? 'bg-white !text-black' : ''} font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base`}
+              className={`group flex h-9 w-9 shrink-0 items-center text-bittersweet dark:text-eerieblack justify-center gap-2 rounded-full bg-brownsugar text-lg ${route == '/' ? 'bg-lemonchiffon !text-black' : ''} font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base`}
             >
-              <Home className="h-4 w-4 transition-all group-hover:scale-110" />
-              <span className="sr-only">Adonis Inc</span>
+              <Home className="h-4 w-4 transition-all group-hover:scale-110 dark:text-eerieblack ${route == '/' ? 'bg-lemonchiffon !text-black' : ''}  " />
+              <span className="sr-only">Tamukong Brian</span>
             </Link>
-            
+
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="/cocktail"
-                   className={`group flex h-9 w-9 shrink-0 items-center justify-center text-muted-foreground gap-2 rounded-full text-lg font-semibold ${route == '/cocktail' ? 'bg-accent text-accent-foreground' : ''} md:h-8 md:w-8 md:text-base`}
+                  href="/work"
+                  className={`group flex h-9 w-9 shrink-0 items-center justify-center text-lemonchiffon  gap-2 rounded-full text-lg font-semibold ${route == '/work' ? 'bg-lemonchiffon !text-black' : ''} md:h-8 md:w-8 md:text-base`}
                 >
-                  <Martini className="h-5 w-5" />
-                  <span className="sr-only">Cocktails</span>
+                  <BriefcaseBusiness className="h-5 w-5" />
+                  <span className="sr-only">Work</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Cocktails</TooltipContent>
+              <TooltipContent side="right">Work</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="/chops"
-                  className={`group flex h-9 w-9 shrink-0 items-center justify-center text-muted-foreground gap-2 rounded-full text-lg font-semibold ${route == '/chops' ? 'bg-accent text-accent-foreground' : ''} md:h-8 md:w-8 md:text-base`}
+                  href="/hobbies"
+                  className={`group flex h-9 w-9 shrink-0 items-center justify-center text-lemonchiffon gap-2 rounded-full text-lg font-semibold ${route == '/hobbies' ? 'bg-lemonchiffon !text-black' : ''} md:h-8 md:w-8 md:text-base`}
                 >
-                  <Popcorn className="h-5 w-5" />
-                  <span className="sr-only">Small Chops</span>
+                  <Palette className="h-5 w-5" />
+                  <span className="sr-only">Hobbies</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Small Chops</TooltipContent>
+              <TooltipContent side="right">Hobbies</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="/games"
-                  className={`group flex h-9 w-9 shrink-0 items-center justify-center text-muted-foreground gap-2 rounded-full text-lg font-semibold ${route == '/games' ? 'bg-accent text-accent-foreground' : ''} md:h-8 md:w-8 md:text-base`}
+                  href="/thoughts"
+                  className={`group flex h-9 w-9 shrink-0 items-center justify-center text-lemonchiffon  gap-2 rounded-full text-lg font-semibold ${route == '/thoughts' ? 'bg-lemonchiffon !text-black' : ''} md:h-8 md:w-8 md:text-base`}
                 >
-                  <Dice3 className="h-5 w-5" />
-                  <span className="sr-only">Games</span>
+                  <Newspaper className="h-5 w-5" />
+                  <span className="sr-only">Thoughts</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Games</TooltipContent>
+              <TooltipContent side="right">Thoughts</TooltipContent>
             </Tooltip>
 
 
@@ -79,8 +116,24 @@ export function SideBar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
+                  href="#"
+                  onClick={toggleTheme}
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-lemonchiffon transition-colors hover:text-bittersweet md:h-8 md:w-8"
+                >
+                  {isDarkMode ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+                  
+                
+                  <span  className="sr-only">Theme</span>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="right">Theme</TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
                   href="/credits"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-lightpurple md:h-8 md:w-8"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-lemonchiffon transition-colors hover:text-bittersweet md:h-8 md:w-8"
                 >
                   <PencilLine className="h-5 w-5" />
                   <span className="sr-only">Credits</span>
@@ -91,7 +144,7 @@ export function SideBar() {
           </nav>
         </aside>
       </TooltipProvider>
-      
+
     </>
   )
 }
