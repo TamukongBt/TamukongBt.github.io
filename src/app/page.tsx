@@ -5,8 +5,9 @@ import Link from "next/link";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { BriefcaseBusiness, Calendar, EarthLock, Github, Instagram, Linkedin, Mail, MessageCircleMore, Network, Palette, Shapes } from "lucide-react";
+import { Briefcase, BriefcaseBusiness, Calendar, EarthLock, Github, Instagram, Linkedin, Mail, MessageCircleMore, Network, Palette, Shapes } from "lucide-react";
 import { Code2, Brain, Database, Container, Layers, Box, Cpu, GitBranch } from 'lucide-react';
+import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 const typingEffect = {
   hidden: { opacity: 0 },
@@ -153,8 +154,8 @@ export default function Home() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-        setCurrentSkillSet((prev) => (prev === 2 ? 0 : prev + 1));
-            
+      setCurrentSkillSet((prev) => (prev === 2 ? 0 : prev + 1));
+
     }, 2000);
 
     return () => clearInterval(interval);
@@ -162,7 +163,7 @@ export default function Home() {
 
 
   return (
-    <div className="flex flex-col h-[98vh] items-center justify-center bg-eerieblack w-full text-whiteout">
+    <div className="flex flex-col h-[90vh] md:h-[98vh] items-center justify-center bg-eerieblack w-full text-whiteout">
 
       <ResizablePanelGroup
         direction="horizontal"
@@ -275,7 +276,7 @@ export default function Home() {
               Hello there you dont know me yet I mean that is why you came and i am glad you did
               I am Idris Elba, Actor, presenter, rapper, Dj, Doc....
               Nah I am just kidding, I am  a software engineer, designer, developer, creator, data analyst ,builder, thinker, dreamer, podcaster..on leave but I am llooking foward on working with you
-              
+
 
             </div>
             <div className=" ">
@@ -285,7 +286,7 @@ export default function Home() {
                   <img
                     src="me.jpg"
                     alt="Just me"
-                   
+
                     className=" w-full max-h-[15rem] object-cover object-top filter grayscale contrast-125  transition-all duration-300 hover:grayscale-0 hover:contrast-100"
                   />
                   <div className="absolute inset-0 bg-white bg-opacity-50 mix-blend-multiply transition-opacity duration-300 hover:opacity-0">
@@ -299,8 +300,8 @@ export default function Home() {
             </div>
           </div>
           <div className="h-4"></div>
-          <div className="col-span-2 hide-scrollbar  ">
-            <div className="border-2 border-lemonchiffon text-yellow-50 p-4 text-xs  font-body text-justify overflow-hidden hide-scrollbar">
+          <div className="col-span-2 hide-scrollbar   ">
+            <div className="border-2 border-lemonchiffon text-yellow-50 p-4 text-xs  font-body text-justify overflow-hidden hide-scrollbar hidden md:block">
               <div className="font-mono font-[600] text-xl tracking-wide capitalize mb-2 flex border-buff text-buff border-b- ">
                 <BriefcaseBusiness className="w-6 h-6 mr-2" />  Experience
               </div>
@@ -342,7 +343,10 @@ export default function Home() {
           {/* </div> */}
         </ResizablePanel>
       </ResizablePanelGroup>
-      <div className="absolute bottom-0 right-0 z-50 !font-design ">
+
+
+
+      <div className="absolute bottom-0 right-0 z-50 !font-design hidden lg:block ">
         <div className="relative group" onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onClick={() => setIsHovered(!isHovered)}>
@@ -352,10 +356,56 @@ export default function Home() {
               }`}
           >
             <div className={`h-full my-auto border-2 p-2 bg-lemonchiffon text-taupe rounded-md border-bittersweet border-dashed `} >
-              Hi Welcome How can we be of service today 
+              Hi Welcome How can we be of service today
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="fixed bottom-4 right-4 z-50 lg:hidden">
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button className="flex items-center justify-center w-12 h-12 bg-bittersweet text-white rounded-full shadow-lg">
+              <Briefcase className="w-6 h-6" />
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="bg-eerieblack rounded-lg">
+            <DialogTitle>Education</DialogTitle>
+            <DialogDescription className="bg-eerieblack">
+              <div className="flex flex-col h-[20em]  lg:h-[40em] items-center justify-center bg-eerieblack w-full text-whiteout">
+                <div className="space-y-6 h-68 overflow-y-auto hide-scrollbar">
+                  {educationData.map((edu, index) => (
+                    <div key={index} className="border-gray-200 text-white lg:!text-lg">
+                      <div className="flex items-center gap-2 text-lemonchiffon mb-1">
+                        <Calendar className="w-4 h-4" />
+                        <span className="text-sm">{edu.period}</span>
+                      </div>
+
+                      <h3 className="font-semibold text-buff mb-1">
+                        {edu.company}
+                      </h3>
+
+                      <div className="mb-1 text-lg font-body">
+                        {edu.responsibilities.map((resp, index) => (
+                          <ul key={index}>
+                            <li key={index} className="block text-lemonchiffon text-sm">
+                              {resp}
+                            </li>
+                          </ul>
+                        ))}
+                      </div>
+
+                      <div className="text-xs leading-4 text-buff">
+                        <span className="font-medium space-x-2">Related skills: </span>
+                        {edu.skills}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </DialogDescription>
+          </DialogContent>
+        </Dialog>
       </div>
 
     </div>
