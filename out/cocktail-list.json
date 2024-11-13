@@ -1,0 +1,100 @@
+[
+  
+  {
+    "id": "2",
+    "name": "Vodka Sunrise",
+    "image": "/vodka-sunrise.webp",
+    "details": "A modern twist on the classic Tequila Sunrise, the Vodka Sunrise is a vibrant cocktail made with vodka, orange juice, and grenadine. Its beautiful gradient of colors mimics a sunrise, making it visually appealing. The drink is both boozy and sweet, offering a delightful taste experience that's perfect for brunches and summer evenings.",
+    "price": 2000,
+    "profile": "boozy, sweet"
+  },
+  {
+    "id": "3",
+    "name": "Matango & Highlife",
+    "image": "/matango-highlife.jpg",
+    "details": "A unique blend of local matango and fresh boozy mixers, popular in West Africa. This cocktail combines the earthy flavors of traditional palm wine with the crispness of a light sweeter flavours. The result is a boozy and sweet drink that's perfect for those who enjoy a touch of cultural heritage in their cocktails. It's both refreshing and satisfying.",
+    "price": 2000,
+    "profile": "boozy, sweet"
+  },
+  {
+    "id": "4",
+    "name": "Hibisca Di Camperon",
+    "image": "/hibisca-di-camperon.jpg",
+    "details": "Combining hibiscus and Campari, this cocktail offers a unique blend of tangy and sweet flavors. The vibrant color and floral notes of hibiscus, just some whiffs of a similiar smell tinged with some bitter orange and a light fresh bubbly topping, paired with the bitter and herbal undertones of Campari, make this drink a standout choice. It's perfect for those who enjoy complex flavors and a touch of elegance in their beverages.",
+    "price": 2000,
+    "profile": "sour, sweet"
+  },
+  {
+    "id": "5",
+    "name": "The Chief’s Brew (For The Boys)",
+    "image": "/chiefs-brew.jpg",
+    "details": "A robust and stiff drink, The Chief’s Brew is perfect for a night out with the boys. This cocktail is designed to pack a punch, with strong flavors that cater to those who enjoy a bold drinking experience. Its rich and intense taste makes it ideal for gatherings where the drinks need to stand out as much as the company.",
+    "price": 2000,
+    "profile": "strong and stiff"
+  },
+  {
+    "id": "6",
+    "name": "Blue Hawaiian",
+    "image": "/blue-hawaian.jpg",
+    "details": "Originating in Hawaii, the Blue Hawaiian is a tropical cocktail that combines rum, blue curaçao, pineapple juice, and coconut cream. Its striking turquoise color and sweet, strong, boozy taste make it a favorite at beach parties and summer gatherings. This drink captures the essence of tropical paradise in a glass, perfect for relaxing and unwinding.",
+    "price": 2000,
+    "profile": "fruity, sweet, strong, boozy"
+  },
+  {
+    "id": "7",
+    "name": "Vodka Bramble",
+    "image": "/vodka-bramble.jpg",
+    "details": "A modern twist on a classic, the Vodka Bramble is a deep red cocktail made with vodka, creme de cassis and toppings. This drink offers a perfect blend of sweet and strong flavors, making it a sophisticated choice for cocktail enthusiasts. It's ideal for those who enjoy a balance of fruitiness and alcohol in their drinks.",
+    "price": 2000,
+    "profile": "deep red, sweet, strong"
+  },
+  {
+    "id": "8",
+    "name": "Mojito",
+    "image": "/mojito.webp",
+    "details": "Originating in Cuba, the Mojito is a refreshing cocktail that combines primarily mint , other mixers and soda water. Known for its light and crisp taste, it's perfect for hot summer days. The Mojito is available in both virgin and alcoholic versions, catering to different preferences. Its easy whips taste profile makes it a crowd favorite.",
+    "price": 2000,
+    "profile": "virgin and alcoholic, easy whips"
+  },
+  {
+    "id": "9",
+    "name": "Cuba Libre",
+    "image": "/cuba-libre.jpg",
+    "details": "A simple yet classic cocktail from Cuba, the Cuba Libre is made with rum, cola, and lime. Its easy-to-make nature and refreshing taste have made it a staple in bars around the world. This drink, with its easy whips profile, is perfect for those who enjoy a straightforward yet flavorful beverage that carries a hint of history.",
+    "price": 2000,
+    "profile": "easy whips"
+  },
+  {
+    "id": "10",
+    "name": "Vodka Shots for the Strong",
+    "image": "/vodka-shots.jpg",
+    "details": "A variety of vodka shots, including Blue Kamikaze, Apple Beez, and Passion Shot. These shots are designed for those who love a challenge and are not afraid of strong flavors. Perfect for starting the night with a bang, each shot offers a unique taste experience that is both bold and memorable.",
+    "price": 2000,
+    "profile": "blue kamikaze, apple beez, passion shot"
+  },
+  {
+    "id": "11",
+    "name": "Hurricane",
+    "image": "/hurricane.jpg",
+    "details": "A New Orleans classic, the Hurricane is made with rum, passion fruit juice, and lime. Known for its strong, sweet, and sour taste profile, this cocktail is a staple during Mardi Gras. The Hurricane's vibrant flavors and boldness make it a favorite among those who enjoy their drinks with a bit of a kick and a lot of personality.",
+    "price": 2000,
+    "profile": "strong, sweet, sour"
+  },
+  {
+    "id": "12",
+    "name": "Planter’s Punch",
+    "image": "/planters-punch.jpg",
+    "details": "A classic Caribbean cocktail, Planter’s Punch is a refreshing blend of rum and mixers. This drink is known for its strong, sweet, and tangy flavor profile, making it perfect for sipping on a hot day. Its tropical ingredients and vibrant taste make it a favorite at beach parties and summer gatherings.",
+    "price": 2000,
+    "profile": "strong, sweet, tangy"
+  },
+  {
+    "id": "13",
+    "name": "Bar's Special",
+    "image": "/special.jpg",
+    "details": "This stays a mystery",
+    "price": "Priceless",
+    "profile": "Taste and see"
+  }
+
+]

@@ -1,0 +1,32 @@
+
+  [
+    {
+      "id": "1",
+      "name": "Meat Pies",
+      "image": "/meatpies.jpg",
+      "details": "Means it is soft and then spicy and then sweet and then, inshort connect with the plug first and thank me later",
+      "plug": "Sis2Cakery: 679404054"
+    },
+    {
+      "id": "2",
+      "name": "Cakes",
+      "image": "/cakes.jpeg",
+      "details": "Cakes, whether it's a classic vanilla or a decadent chocolate, are the life of the party! With each sweet slice, you're in for a delightful treat that's sure to satisfy your cravings. So, grab a plate, indulge in a piece, and let the sugary goodness bring joy to your taste buds. If you read and got here congrats.... now come for the event",
+      "plug": "Sis2Cakery: 679404054"
+    },
+    {
+      "id": "3",
+      "name": "Popcorn",
+      "image": "/popcorn.jpg",
+      "details": "Salt or sugar, popcorn's perfect for keeping your mouths busy during the party and cocktails. Whether you're mingling or dancing, this snack will keep you happily munching all night long.",
+      "plug": "Bien Caramelisez"
+    },
+    {
+      "id": "4",
+      "name": "Groundnuts",
+      "image": "/gnuts.webp",
+      "details": "Groundnuts are a delicious and crunchy snack made from roasted peanuts. Perfectly seasoned with a pinch of salt and a hint of spice, they offer a satisfying, savory bite. Whether you're munching on them while watching a movie or enjoying them as an afternoon treat, groundnuts are a tasty and nutritious way to curb your cravings.",
+      "plug": "Groudnut District: Douala"
+    }
+  ]
+
