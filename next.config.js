@@ -17,7 +17,7 @@ const withPWA = require("@ducanh2912/next-pwa").default({
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true,
+    unoptimized: false,
   },
   // Ensure trailing slashes are handled correctly
   trailingSlash: true,

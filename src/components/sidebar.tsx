@@ -23,7 +23,7 @@ import { useEffect, useState } from "react";
 
 export function SideBar() {
   const route = usePathname();
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -115,8 +115,7 @@ export function SideBar() {
           <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link
-                  href="#"
+                <div
                   onClick={toggleTheme}
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-lemonchiffon transition-colors hover:text-bittersweet md:h-8 md:w-8"
                 >
@@ -124,7 +123,7 @@ export function SideBar() {
                   
                 
                   <span  className="sr-only">Theme</span>
-                </Link>
+                </div>
               </TooltipTrigger>
               <TooltipContent side="right">Theme</TooltipContent>
             </Tooltip>

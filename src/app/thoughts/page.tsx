@@ -150,11 +150,11 @@ const Thoughts = () => {
                                     <ArrowRightFromLine size={20} className="text-taupe hover:text-bittersweet mx-2" />
                                 </Button>
                             </div>
-                            <div className=" border-t-2 border-taupe p-4">
+                            <div className=" border-t-2 border-taupe p-4 w-auto">
                                 {Array.isArray(chapters[activeChapter].content) ? (
-                                    <div className="w-45 prose ">
+                                    <div className="w-auto prose ">
                                         <h2 className="text-2xl font-semibold text-eerieblack text-center underline ">{chapters[activeChapter].title}</h2>
-                                        <pre className='text-left w-full text-taupe font-design text-2xl justify'>{chapters[activeChapter].content[0].description}</pre>
+                                        <p className='text-left w-full text-taupe font-design text-2xl justify'>{chapters[activeChapter].content[0].description}</p>
                                     </div>
                                 ) : (
                                     <div className="w-full col-span-4">
