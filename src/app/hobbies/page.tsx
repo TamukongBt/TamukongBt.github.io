@@ -20,23 +20,23 @@ const Hobbies = () => {
             icon: Palette,
             content: [
                 {
-                    screenshot: "1.jpg",
+                    screenshot: "../1.jpg",
                     name: "",
                     description: "",
                 },
                 {
-                    screenshot: "2.jpg",
+                    screenshot: "../2.jpg",
                     name: "",
                     description: "",
                 },
                 {
-                    screenshot: "3.jpg",
+                    screenshot: "../3.jpg",
                     name: "",
                     description: "",
                     url: "",
                 },
                 {
-                    screenshot: "4.jpg",
+                    screenshot: "../4.jpg",
                     name: "",
                     description: "",
                     url: "",
@@ -45,37 +45,37 @@ const Hobbies = () => {
                     name: "",
                     description: "",
                     url: "",
-                    screenshot: "5.jpg"
+                    screenshot: "../5.jpg"
                 },
                 {
                     name: "",
                     description: "",
                     url: "",
-                    screenshot: "6.jpg"
+                    screenshot: "../6.jpg"
                 },
                 {
                     name: "",
                     description: "",
                     url: "",
-                    screenshot: "7.jpg"
+                    screenshot: "../7.jpg"
                 },
                 {
                     name: "",
                     description: "",
                     url: "",
-                    screenshot: "8.jpg"
+                    screenshot: "../8.jpg"
                 },
                 {
                     name: "",
                     description: "",
                     url: "",
-                    screenshot: "9.jpg"
+                    screenshot: "../9.jpg"
                 },
                 {
                     name: "",
                     description: "",
                     url: "",
-                    screenshot: "1.png"
+                    screenshot: "../1.png"
                 },
             ],
         },
@@ -87,19 +87,19 @@ const Hobbies = () => {
                     name: "Naming Ceremony",
                     description: "Get out of here you “Maquiza”, ever heard an aunt or even your mum call you that whilst growing up ? Want to know what it meant? Well then join us… If you’re 237 then you’ve surely met mama friendship, fake doccys and grassland. And if you haven’t then join us as they introduce us to some of their ‘babies’ and how they got their names. In this episode we journey through..",
                     url: "https://podcasts.apple.com/us/podcast/the-naming-ceremony/id1613474137?i=1000556233168",
-                    screenshot: "hc3.png"
+                    screenshot: "../hc3.png"
                 },
                 {
                     name: "Arabian Nights",
                     description: "From the late-night backyard gathering to the lights-out quarter gatherings and even down to the eerie bedrooms with scary blinds… one thing is sure we all had a setting for our favorite bedtime or storytelling sessions. Remember those days when our elderly ones told us stories that either left you so scared you had to fall asleep immediately after or had you begging for more? Yes yes, the good old storytelling days join us as we take you through a time warp of storytelling with of course none other than our most talked of characters “John and Mary”… Just how much do you remember?",
                     url: "https://podcasts.apple.com/us/podcast/arabian-nights/id1613474137?i=1000588336757",
-                    screenshot: "hc4.png"
+                    screenshot: "../hc4.png"
                 },
                 {
                     name: "Welcome to class",
                     description: "“I was a serious student when I was your age”…..that’s what they always said but was it always so? Did the folly and capriciousness start only in our time or are we the offspring of masters at the craft of lies? Welcome to class, sit back whilst we walk you through allowances, successes, failures, school menu and of course breaking bounds! We bring you the mindset behind “Grammar” and“Technical” education.",
                     url: "https://podcasts.apple.com/us/podcast/welcome-to-class/id1613474137?i=1000564593136",
-                    screenshot: "hc3.png"
+                    screenshot: "../hc3.png"
                 },
             ],
         },
@@ -110,19 +110,19 @@ const Hobbies = () => {
                 {
                     name: "Hidden Cowries",
                     url: "https://youtube.com/@hiddencowries4868?si=eqmL0wPHkqutbbYQ",
-                    screenshot: "hc1.png",
+                    screenshot: "../youtube.webp",
                     description: "Hidden Cowries Youtube Channel"
                 },
                 {
                     name: "Pace Setter Visit",
                     url: "https://youtu.be/WopaBB_Dk4k?si=q0EUW0pZ_d-cjHQO",
-                    screenshot: "hc2.png",
+                    screenshot: "../youtube.webp",
                     description: "Pace Setter Visit to Dublin"
                 },
                 {
                     name: "Lims Diaries",
                     url: "https://www.youtube.com/@limsdiaries7625",
-                    screenshot: "hc3.png",
+                    screenshot: "../youtube.webp",
                     description: "Lims Diaries Youtube Channel"
                 }
             ]

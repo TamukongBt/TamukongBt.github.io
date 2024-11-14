@@ -18,49 +18,49 @@ const BookReader = () => {
                     description: "B2C Ecommerce Application.",
                     url: "https://theaxismarket.com/home",
                     github: "",
-                    screenshot: "axis.png"
+                    screenshot: "../axis.png"
                 },
                 {
                     name: "The Nightout Party App",
                     description: "Event discovery and ticket booking platform.",
                     url: "https://www.thenightout.party/",
                     github: "",
-                    screenshot: "nightout.png"
+                    screenshot: "../nightout.png"
                 },
                 {
                     name: "Kvisionlens",
                     description: "Photography Portfolio and Booking.",
                     url: "https://kvisionlens.com/",
                     github: "",
-                    screenshot: "kvision.png"
+                    screenshot: "../kvision.png"
                 },
                 {
                     name: "VZZ Brokerage",
                     description: "Loan and Brokerage App.",
                     url: "https://www.vzzbrokerage.com/",
                     github: "",
-                    screenshot: "vz.png"
+                    screenshot: "../vz.png"
                 },
                 {
                     name: "Omega Gospel Ministries",
                     description: "Church Website and Donation Site.",
                     url: "https://omegagospelministry.com/",
                     github: "",
-                    screenshot: "omega.png"
+                    screenshot: "../omega.png"
                 },
                 {
                     name: "Studs.",
                     description: "Student Timetable Project.",
                     url: "https://github.com/TamukongBt/Studs",
                     github: "https://github.com/TamukongBt/Studs",
-                    screenshot: ""
+                    screenshot: "../"
                 },
                 {
                     name: "Immoniva.",
                     description: "Company E-commerce and Service Homepage.",
                     url: "https://github.com/TamukongBt/immonivo",
                     github: "https://github.com/TamukongBt/immonivo",
-                    screenshot: ""
+                    screenshot: "../"
                 },
                 {
                     name: "Cards.",
