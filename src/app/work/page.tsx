@@ -227,7 +227,7 @@ const BookReader = () => {
                                                             className="w-full h-48 rounded-lg  object-cover object-top filter  contrast-125  transition-all duration-100 grayscale-0"
                                                         />
                                                         <div className="absolute inset-0 bg-white bg-opacity-50 rounded-lg mix-blend-multiply transition-opacity duration-100 hover:hidden">
-                                                            <img src="./image.png" alt="the picture" className="w-full h-48 rounded-lg" />
+                                                            <img src="../image.png" alt="the picture" className="w-full h-48 rounded-lg" />
                                                         </div>
                                                     </div>
                                                 </a>
