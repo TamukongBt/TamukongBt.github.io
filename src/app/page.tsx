@@ -19,7 +19,7 @@ const typingEffect = {
   }),
 };
 
-const text = "TAMUKONG";
+const text = "BRIAN";
 const fonts = [
   { class: "font-display", size: "xl:text-[8rem]" },
   { class: "font-script", size: "xl:text-[8rem]" },
@@ -197,7 +197,7 @@ export default function Home() {
                     </div>
                   </motion.span>
                 </div>
-                <div className="text-[2rem] lg:text-[3rem] xl:text-8xl  font-light font-body tracking-2">Brian Tanyie</div>
+                <div className="text-[2rem] lg:text-[3rem] xl:text-8xl  font-light font-body tracking-2">Tamukong </div>
                 <div className="text-lg font-bold font-body">I create, I build, I design</div>
                 <div className="pt-2">
                   <Link href="/work">
@@ -206,7 +206,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bottom p-4">
+              <div className="bottom m-2 ">
                 <div className="flex justify-end space-x-4 my-2 text-lemonchiffon ">
                   <Link href="https://www.instagram.com/tbs_adonis" target="_blank" className="text-2xl">
                     <Instagram className="text-2xl" />
@@ -271,12 +271,11 @@ export default function Home() {
         <ResizableHandle className="bg-lemonchiffon !border-lemonchiffon" />
         <ResizablePanel defaultSize={40} className="lg:p-6">
           <div className="grid grid-cols-1 w-full  xl:grid-cols-2  text-buff">
-            <div className="block border-2 border-lemonchiffon text-yellow-50 p-4 text-xs xl:text-lg leading-5 font-body !text-lemonchiffon  ">
-              <div className="font-serif font-[700] text-lg tracking-wide capitalize border-buff  text-buff border-b-2">First of All</div>
-              Hello there you dont know me yet I mean that is why you came and i am glad you did
-              I am Idris Elba, Actor, presenter, rapper, Dj, Doc....
-              Nah I am just kidding, I am  a software engineer, designer, developer, creator, data analyst ,builder, thinker, dreamer, podcaster..on leave but I am llooking foward on working with you
-
+            <div className="block border-2 border-lemonchiffon text-yellow-50 p-4 leading-5 font-body !text-lemonchiffon  ">
+              <div className="font-serif font-[700] text-lg tracking-wide capitalize border-buff text-buff border-b-2">First of All</div>
+              <p className="text-[0.8em] pt-2 xl:text-[1em] text-lemonchiffon">
+                I am a Software Engineer with a passion for building robust and scalable software solutions. I specialize in fullstack web development,artificial Intelligence, data analysis, and system architecture. I have experience working with a variety of technologies, including Python, SQL,TypeScript, Power Bi and Docker. I am always eager to learn new skills and take on new challenges.
+              </p>
 
             </div>
             <div className=" ">
@@ -300,13 +299,13 @@ export default function Home() {
             </div>
           </div>
           <div className="h-4"></div>
-          <div className="col-span-2 hide-scrollbar   ">
+          <div className="col-span-2  hide-scrollbar   ">
             <div className="border-2 border-lemonchiffon text-yellow-50 p-4 text-xs  font-body text-justify overflow-hidden hide-scrollbar hidden md:block">
               <div className="font-mono font-[600] text-xl tracking-wide capitalize mb-2 flex border-buff text-buff border-b- ">
-                <BriefcaseBusiness className="w-6 h-6 mr-2" />  Experience
+                <BriefcaseBusiness className="w-6 h-6 mr-2 " />  Experience
               </div>
 
-              <div className="flex flex-col h-[20em]  lg:h-[40em] items-center justify-center bg-eerieblack w-full text-whiteout">
+              <div className="flex flex-col h-[15em]  xl:h-[22em] items-center justify-center bg-eerieblack w-full text-whiteout">
                 <div className="space-y-6 h-68 overflow-y-auto hide-scrollbar">
                   {educationData.map((edu, index) => (
                     <div key={index} className="border-gray-200 text-white lg:!text-lg">
@@ -315,23 +314,23 @@ export default function Home() {
                         <span className="text-sm">{edu.period}</span>
                       </div>
 
-                      <h3 className="font-semibold text-buff mb-1">
+                      <h3 className="font-semibold text-bittersweet mb-1">
                         {edu.company}
                       </h3>
 
                       <div className="mb-1 text-lg font-body">
-                        {edu.responsibilities.map((resp, index) => (
-                          <ul key={index}>
+                        <ul className="">
+                          {edu.responsibilities.map((resp, index) => (
                             <li key={index} className="block text-lemonchiffon text-sm">
                               {resp}
                             </li>
-                          </ul>
-                        ))}
+                          ))}
+                        </ul>
                       </div>
 
                       <div className="text-sm leading-4 text-buff">
                         <span className="font-medium">Related skills: </span>
-                        {edu.skills}
+                        {edu.skills.join(", ")}
                       </div>
                     </div>
                   ))}
@@ -346,7 +345,7 @@ export default function Home() {
 
 
 
-      <div className="absolute bottom-0 right-0 z-50 !font-design hidden lg:block ">
+      {/* <div className="absolute bottom-0 right-0 z-50 !font-design hidden lg:block ">
         <div className="relative group" onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onClick={() => setIsHovered(!isHovered)}>
@@ -360,7 +359,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="fixed bottom-4 right-4 z-50 lg:hidden">
         <Dialog>

@@ -53,14 +53,14 @@ const BookReader = () => {
                     description: "Student Timetable Project.",
                     url: "https://github.com/TamukongBt/Studs",
                     github: "https://github.com/TamukongBt/Studs",
-                    screenshot: "../"
+                    screenshot: ""
                 },
                 {
                     name: "Immoniva.",
                     description: "Company E-commerce and Service Homepage.",
                     url: "https://github.com/TamukongBt/immonivo",
                     github: "https://github.com/TamukongBt/immonivo",
-                    screenshot: "../"
+                    screenshot: ""
                 },
                 {
                     name: "Cards.",
@@ -93,14 +93,14 @@ const BookReader = () => {
                     description: "A Dating Website Design.",
                     url: "https://www.figma.com/design/G0jUNAr1YBOQp7hXRF5bv2/Match-N-Mingle?node-id=0-1&t=CPHCj4jY7jMrsT4N-1",
                     github: "",
-                    screenshot: "mnm.png"
+                    screenshot: "../mnm.png"
                 },
                 {
                     name: "Congress App",
                     description: "Religious Booking App.",
                     url: "https://www.figma.com/design/OV6GYlx9VZ6U2IeXEPchNa/Congress-App?node-id=284-2&t=ZVuHoOfnpCRYRgWN-1",
                     github: "",
-                    screenshot: "congress.png"
+                    screenshot: "../congress.png"
                 },
             ],
         },
@@ -236,11 +236,11 @@ const BookReader = () => {
                                                     {/* <img src={'github.png'} alt={project.name} className="w-full h-48 object-contain rounded-lg mb-4" /> */}
                                                     <div className="relative w-full">
                                                         <img
-                                                            src={'github.png'} alt={project.name}
+                                                            src={'../github.png'} alt={project.name}
                                                             className="w-full h-48  object-contain filter grayscale contrast-125  transition-all duration-300 "
                                                         />
                                                         <div className="absolute inset-0 bg-white bg-opacity-50 mix-blend-multiply transition-opacity duration-300 hover:opacity-0">
-                                                            <img src="image.png" alt="the picture" className="w-full h-48" />
+                                                            <img src="../image.png" alt="the picture" className="w-full h-48" />
                                                         </div>
                                                     </div>
                                                 </a>

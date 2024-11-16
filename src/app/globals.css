@@ -8,14 +8,14 @@
     --foreground: 222.2 84% 4.9%;
 
     /* CSS HSL */
-    --eerieblack: 45, 92%, 95%;
-    --lemonchiffon: 40, 15%, 45%;
+    --eerieblack: 100, 89%, 100%;
+    --lemonchiffon: 16, 58%, 68%;
     --lemonchiffonlight: #fbf2c139;
-    --taupe: 42, 82%, 95%;
-    --bistre: 42, 82%, 95%;
+    --taupe: 42, 82%, 85%;
+    --bistre: 18, 52%, 90%;
     --buff: hsl(22, 80%, 73%);
-    --brownsugar: 20, 52%, 84%;
-    --bittersweet: 10, 93%, 80%;
+    --brownsugar: 32, 31%, 43%;
+    --bittersweet: 322, 31%, 50%;
     --bittersweetlight: #f96f5d23;
 
     --brownpurle: 317, 33%, 17%;
