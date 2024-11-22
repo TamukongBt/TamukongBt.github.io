@@ -283,10 +283,10 @@ export default function Home() {
                 {/* Container for the image and overlay */}
                 <div className="relative border-2 border-lemonchiffon text-yellow-50 text-xs w-full font-body text-justify">
                   <img
-                    src="me.jpg"
+                    src="me2.jpg"
                     alt="Just me"
 
-                    className=" w-full max-h-[15rem] object-cover object-top filter grayscale contrast-125  transition-all duration-300 hover:grayscale-0 hover:contrast-100"
+                    className=" w-full max-h-[15rem] object-cover object-top filter dark:grayscale   transition-all duration-300 hover:grayscale-0 hover:contrast-100"
                   />
                   <div className="absolute inset-0 bg-white bg-opacity-50 mix-blend-multiply transition-opacity duration-300 hover:opacity-0">
                     <img src="image.png" alt="the picture" className="!h-full w-full" />

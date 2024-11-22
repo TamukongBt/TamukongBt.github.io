@@ -1,0 +1,11 @@
+.data {
+    --eerieblack: hsl(300, 100%, 98%);
+    --lemonchiffon: hsl(16, 48%, 68%);
+    --lemonchiffonlight: #fbf2c139;
+    --taupe: hsl(42, 82%, 95%);
+    --bistre: hsl(18, 52%, 85%);
+    --buff: hsl(22, 80%, 73%);
+    --brownsugar: hsl(342, 58%, 75%);
+    --bittersweet: hsl(322, 31%, 43%);
+    --bittersweetlight: #f96f5d23;
+}
