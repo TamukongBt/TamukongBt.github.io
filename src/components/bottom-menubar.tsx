@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from "next/link"
 import {
+    BookOpen,
     Dice3,
     Home,
     Martini,
@@ -36,6 +37,15 @@ const BottomMenubar = () => {
                         >
                             <Dice3 className="h-5 w-5" />
                             <span className="sr-only">Games</span>
+                        </Link>
+                    </MenubarTrigger>
+                    <MenubarTrigger className='!bg-transparent'>
+                        <Link
+                            href="/blog"
+                            className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 text-lg font-semibold text-primary-foreground md:text-base"
+                        >
+                            <BookOpen className="h-5 w-5" />
+                            <span className="sr-only">Blog</span>
                         </Link>
                     </MenubarTrigger>
                     <MenubarTrigger className='!bg-transparent'>

@@ -1,70 +1,79 @@
 "use client"
 import { Moon, Sun } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Header = () => {
     // Set the initial state based on the stored theme
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const route = usePathname();
+
+    const navItems = [
+        { href: "/work", label: "Work" },
+        { href: "/skills", label: "Skills" },
+        { href: "/blog", label: "Blog" },
+        { href: "/hobbies", label: "Musings" },
+    ];
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            const theme = localStorage.getItem('theme');
-            const isDark = theme === 'dark';
-            if (isDark) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
+            const storedTheme = localStorage.getItem('theme');
+            const isDark = storedTheme
+                ? storedTheme === 'dark'
+                : document.documentElement.classList.contains('dark');
+
+            document.documentElement.classList.toggle('dark', isDark);
+            setIsDarkMode(isDark);
         }
     }, []);
 
 
 
     const toggleTheme = () => {
-
-        // removefromLocalStorage
-        localStorage.removeItem('theme');
-        // storeIn storage 
-        localStorage.setItem('theme', !isDarkMode ? 'dark' : 'light');
-        document.documentElement.classList.toggle('dark', !isDarkMode);
-        setIsDarkMode(!isDarkMode);
+        setIsDarkMode((previous) => {
+            const next = !previous;
+            localStorage.setItem('theme', next ? 'dark' : 'light');
+            document.documentElement.classList.toggle('dark', next);
+            return next;
+        });
     };
 
     return (
-        <header className="sticky top-0 z-30  !w-full justify-between flex md:hidden pl-4 !h-14 border border-lemonchiffon bg-eerieblack sm:static sm:h-auto  ">
+        <header className="sticky top-0 z-30 w-full md:hidden border border-brownsugar bg-eerieblack sm:static sm:h-auto">
+            <div className="flex items-center gap-2 h-14 pl-3 pr-2">
+                <div className="flex-1 overflow-x-auto hide-scrollbar">
+                    <nav className="flex min-w-max items-center gap-1">
+                        {navItems.map((item) => (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className={`px-3 py-1.5 rounded-sm text-xs font-console uppercase tracking-wide transition-colors duration-200 border ${
+                                    route === item.href
+                                        ? "border-bittersweet text-lemonchiffon bg-bistre"
+                                        : "border-transparent text-taupe hover:text-lemonchiffon hover:bg-bistre/60"
+                                }`}
+                            >
+                                {item.label}
+                            </Link>
+                        ))}
+                    </nav>
+                </div>
 
-            <div className="grid grid-cols-3 space-x-3 text-lemonchiffon font-sans pr-2  font-light sm:text-md rounded-lg ">
-                <Link href="/work" className="flex items-center ">
-                    <div className="mx-auto items-center hover:border-lemonchiffon hover:border-b-2">
-                        My Work
-                    </div>
-                </Link>
-                <Link href="/hobbies" className="flex items-center">
-                    <div className="mx-auto items-center  hover:border-lemonchiffon hover:border-b-2">
-                        Hobbies
-                    </div>
-                </Link>
-                <Link href="/thoughts" className="flex items-center">
-                    <div className="mx-auto items-center hover:border-lemonchiffon hover:border-b-2">
-                        Thoughts
-                    </div>
-                </Link>
-            </div>
-            <div className="flex space-x-2 ">
+                <div className="flex items-center gap-2 shrink-0">
                 <div
                     onClick={toggleTheme}
-                    className=" h-9 w-9 mx-auto my-auto items-center justify-center rounded-lg text-eerieblack bg-lemonchiffon transition-colors border border-lemonchiffon hover:text-bittersweet md:h-8 md:w-8"
+                    aria-label="Toggle theme"
+                    role="button"
+                    className="h-9 w-9 flex items-center justify-center rounded-lg text-eerieblack bg-bittersweet transition-colors hover:bg-brownsugar hover:text-lemonchiffon md:h-8 md:w-8 cursor-pointer"
                 >
-                    {isDarkMode ? <Moon className="h-7 w-7 mx-auto my-auto " /> : <Sun className="h-7 w-7" />}
-
-
+                    {isDarkMode ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
                 </div>
-                <div className=" bg-lemonchiffon font-bold font-display capitalize">
-
-                    <Link href="/" className="px-4 text-2xl text-bittersweet leading-3 my-auto flex align-middle items-center h-full">
+                <div className="bg-eerieblack border-l border-brownsugar font-bold font-display capitalize">
+                    <Link href="/" className="px-3 text-2xl text-lemonchiffon leading-3 flex items-center h-9 tracking-widest">
                         TB
                     </Link>
+                </div>
                 </div>
             </div>
         </header>

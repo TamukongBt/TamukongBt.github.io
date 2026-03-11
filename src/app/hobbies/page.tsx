@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Menu, ArrowLeftFromLine, ArrowRightFromLine, Palette, Youtube, Mic } from 'lucide-react';
+import { Menu, ArrowLeftFromLine, ArrowRightFromLine, Palette, Youtube, Mic, PenToolIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Menubar, MenubarMenu, MenubarTrigger } from '@/components/ui/menubar';
 
@@ -126,15 +126,15 @@ const Hobbies = () => {
                     description: "Lims Diaries Youtube Channel"
                 }
             ]
-        }
+        },
     ];
 
 
-
     return (
-        <div className="h-[98vh] items-center justify-center bg-eerieblack w-full !text-whiteout">
+        <div className="h-[calc(100dvh-3.5rem)] md:h-[98vh] flex flex-col bg-eerieblack w-full !text-whiteout">
 
-            <Menubar className="fixed rounded-xl lg:hidden !z-30 w-[85%]  !bg-eerieblack bottom-10  right-5 bg-purple text-white ">
+            {/* Mobile Nav Bar */}
+            <Menubar className="fixed rounded-sm lg:hidden !z-30 w-[90%] !bg-bistre border border-brownsugar bottom-6 right-4 left-4 mx-auto">
                 <MenubarMenu >
                     <div className="flex items-center justify-between w-full">
                         {chapters.map((chapter, index) => {
@@ -143,10 +143,11 @@ const Hobbies = () => {
                                 <MenubarTrigger
                                     key={index}
                                     onClick={() => setActiveChapter(index)}
-                                    className={`!bg-transparent w-full text-left p-4 hover:bg-lemonchiffon hover:text-eerieblack transition-colors duration-200
-                ${activeChapter === index ? 'bg-lemonchiffon text-eerieblack border-bittersweet' : 'text-lemonchiffon hover:bg-lemonchiffon hover:text-eerieblack'}`}
+                                    className={`!bg-transparent flex-1 flex justify-center p-3 transition-colors duration-200 ${
+                                      activeChapter === index ? 'text-lemonchiffon' : 'text-taupe hover:text-lemonchiffon'
+                                    }`}
                                 >
-                                    <IconComponent className={`h-6 w-6 hover:bg-transparent ${activeChapter === index ? 'border-lemonchiffon border text-lemonchiffon  rounded-sm p-[2px]' : 'text-lemonchiffon'} transition-colors duration-200`} />
+                                    <IconComponent className="h-5 w-5" />
 
                                 </MenubarTrigger>
                             )
@@ -156,22 +157,26 @@ const Hobbies = () => {
 
                 </MenubarMenu>
             </Menubar>
-            <div className="flex h-full border border-lemonchiffon">
+
+            <div className="flex flex-1 min-h-0 border border-brownsugar">
                 {/* Sidebar */}
-                <div className={`hidden lg:block bg-eerieblack shadow-lg transition-all duration-300 ${isSidebarOpen ? 'w-64' : 'w-0'
+                <div className={`hidden lg:block bg-eerieblack border-r border-brownsugar shadow-lg transition-all duration-300 ${isSidebarOpen ? 'w-64' : 'w-0'
                     } overflow-hidden`}>
-                    <div className="p-4 border-b border-gray-200">
-                        <h2 className="text-3xl font-display font-semibold text-lemonchiffon">Projects</h2>
+                    <div className="p-4 border-b border-brownsugar">
+                        <h2 className="text-xs font-console uppercase tracking-widest text-taupe">Projects</h2>
                     </div>
                     <nav className="overflow-y-auto  h-full ">
                         {chapters.map((chapter, index) => (
                             <button
                                 key={index}
                                 onClick={() => setActiveChapter(index)}
-                                className={`w-full text-left p-4 hover:bg-lemonchiffon hover:text-eerieblack transition-colors duration-200
-                ${activeChapter === index ? 'bg-lemonchiffon border-l-4 text-eerieblack border-bittersweet' : 'text-lemonchiffon hover:bg-lemonchiffon hover:text-eerieblack'}`}
+                                className={`w-full text-left px-4 py-3 text-sm font-body transition-colors duration-200 border-l-2 ${
+                                  activeChapter === index
+                                    ? 'border-bittersweet text-lemonchiffon bg-bistre'
+                                    : 'border-transparent text-taupe hover:text-lemonchiffon hover:bg-bistre/60'
+                                }`}
                             >
-                                <span className={`font-medium`}>{chapter.title}</span>
+                                {chapter.title}
                             </button>
                         ))}
                     </nav>
@@ -180,71 +185,80 @@ const Hobbies = () => {
                 </div>
 
                 {/* Main Content */}
-                <div className="flex-1 flex flex-col border-b border-l border-lemonchiffon">
+                <div className="flex-1 flex flex-col overflow-hidden">
                     {/* Content Header */}
-                    <div className="bg-bittersweet shadow-sm border-b border-lemonchiffon p-[0.85em] flex items-center">
+                    <div className="bg-eerieblack border-b border-brownsugar px-4 py-4 md:px-6 md:py-4 flex items-center gap-3">
                         <Button
                             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                            className="p-2 rounded-lg border-2 border-bittersweet hover:border-lemonchiffon  bg-lemonchiffon  transition-colors duration-200"
+                            size="sm"
+                            variant="outline"
+                            className="lg:hidden p-1.5 h-auto border-brownsugar text-taupe hover:text-lemonchiffon"
                         >
-                            <Menu size={20} className="text-taupe hover:text-bittersweet" />
+                            <Menu size={16} />
                         </Button>
-                        <h1 className="ml-4 text-xl font-semibold text-lemonchiffon">
-                            {chapters[activeChapter].title}
-                        </h1>
+                        <div>
+                            <p className="text-[0.6em] font-console tracking-widest uppercase text-taupe leading-none mb-1">Musings</p>
+                            <h1 className="text-lg md:text-xl font-body text-lemonchiffon leading-tight">
+                                {chapters[activeChapter].title}
+                            </h1>
+                        </div>
                     </div>
 
                     {/* Content Area */}
-                    <div className="flex-1 overflow-auto md:p-8  bg-eerieblack m-4 h-full  rounded-lg shadow-sm">
+                    <div className="flex-1 flex flex-col overflow-y-auto p-4 md:p-6 lg:p-8 bg-eerieblack  hide-scrollbar">
 
-                        <div className="py-2 max-w-none   bg-lemonchiffon rounded-lg border border-lemonchiffon">
+                        <div className="w-full flex-1 mx-auto bg">
                             {/* next and previous buttons */}
-                            <div className="flex space-x-2 justify-end">
+                            <div className="flex space-x-2 w-full justify-between lg:justify-end mb-4">
                                 <Button
                                     onClick={() => setActiveChapter(activeChapter - 1)}
                                     disabled={activeChapter === 0}
-                                    variant={'link'}
-                                    className="border-bittersweet hover:bg-transparent text-taupe bg-lemonchiffon  transition-colors duration-200"
+                                    variant={'outline'}
+                                    className="border border-brownsugar text-taupe bg-transparent hover:text-lemonchiffon hover:bg-brownsugar transition-colors duration-200"
                                 >
-                                    <ArrowLeftFromLine size={20} className="transform  hover:text-bittersweet text-taupe mx-2" />
+                                    <ArrowLeftFromLine size={16} className="mr-2" />
                                     Previous
                                 </Button>
                                 <Button
                                     onClick={() => setActiveChapter(activeChapter + 1)}
                                     disabled={activeChapter === chapters.length - 1}
-                                    variant={'link'}
-                                    className="hover:bg-transparent bg-lemonchiffon text-taupe  transition-colors duration-200"
+                                    variant={'outline'}
+                                    className="border border-brownsugar text-taupe bg-transparent hover:text-lemonchiffon hover:bg-brownsugar transition-colors duration-200"
                                 >
                                     Next
-                                    <ArrowRightFromLine size={20} className="text-taupe hover:text-bittersweet mx-2" />
+                                    <ArrowRightFromLine size={16} className="ml-2" />
                                 </Button>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 border-t-2 border-taupe p-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {Array.isArray(chapters[activeChapter].content) ? (
                                     chapters[activeChapter].content.map((project, index) => (
-                                        <div key={index} className="border w-full hover:border-2 rounded-lg border-taupe p-4 transition-all">
-                                            {project.screenshot && (
-                                                <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-                                                    <div className="relative border-2 border-lemonchiffon rounded-lg text-yellow-50 text-xs font-body  text-justify">
+                                        <div key={index} className="border border-brownsugar bg-bistre/30 w-full hover:border-taupe rounded-sm p-4 transition-all flex flex-col h-full">
+                                            {'screenshot' in project && project.screenshot && (
+                                                <a href={'url' in project ? project.url : '#'} target="_blank" rel="noopener noreferrer" className="block text-taupe hover:opacity-80 transition-opacity">
+                                                    <div className="mb-4 relative h-48 w-full overflow-hidden rounded-sm">
                                                         <img
-                                                            src={project.screenshot} alt={project.name || 'Project Image'}
-                                                            className="w-full h-48 rounded-lg  object-cover object-top filter  contrast-125  transition-all duration-100 grayscale-0"
+                                                            src={project.screenshot}
+                                                            alt={'name' in project ? project.name : 'Project image'}
+                                                            className="w-full h-full object-cover rounded-sm border border-brownsugar transition-all duration-300"
                                                         />
-                                                        <div className="absolute inset-0 bg-white bg-opacity-50 rounded-lg mix-blend-multiply transition-opacity duration-100 hover:hidden">
-                                                            <img src="../image.png" alt="the picture" className="w-full h-48 rounded-lg" />
-                                                        </div>
                                                     </div>
                                                 </a>
                                             )}
-                                            <div className="border-t border-taupe">
-                                                {project.name && <h3 className="text-lg font-semibold text-taupe font-console">{project.name}</h3>}
-                                                {project.description && <p className="text-sm text-bistre">{project.description.slice(0, 70)}...</p>}
+                                            <div className="pt-3 flex-1 flex flex-col">
+                                                {'name' in project && project.name && <h3 className="text-lg font-body text-lemonchiffon">{project.name}</h3>}
+                                                {'description' in project && project.description && <p className="text-sm text-taupe mt-1 leading-relaxed line-clamp-3">{project.description}</p>}
+                                                <div className="flex-1"></div>
+                                                {'url' in project && project.url && (
+                                                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="mt-4 flex items-center text-taupe hover:text-bittersweet transition-colors text-sm font-sans w-fit">
+                                                        Link <ArrowRightFromLine className="w-4 h-4 ml-1" />
+                                                    </a>
+                                                )}
                                             </div>
                                         </div>
                                     ))
                                 ) : (
-                                    <div className="w-full col-span-4">
-                                        <p className='text-center w-full text-taupe font-design text-2xl'>{`Coming Soon..`}</p>
+                                    <div className="w-full col-span-3">
+                                        <p className='text-center w-full text-taupe font-console text-lg'>Coming Soon..</p>
                                     </div>
                                 )}
                             </div>

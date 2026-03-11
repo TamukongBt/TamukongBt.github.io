@@ -36,10 +36,13 @@ const config = {
         old: ["Pirata One", "cursive"],
       },
       colors: {
-        brownpurple: "hsl(var(--brownpurple))",
-        blueishpurple: "hsl(var(--blueishpurple))",
-        lightpurple: "hsl(var(--lightpurple))",
-        neonpurple: "hsl(var(--neonpurple))",
+        /* ── Warm black palette tokens ─────────────────────
+           #14110F → eerieblack (bg)
+           #34312D → brownsugar (panels/borders)
+           #7E7F83 → buff (muted grey)
+           #D9C5B2 → bittersweet (beige accent / CTA)
+           #F3F3F4 → lemonchiffon / whiteout (light text)
+        ──────────────────────────────────────────────────── */
         whiteout: "hsl(var(--whiteout))",
         lemonchiffonlight: "var(--lemonchiffonlight)",
         lemonchiffon: "hsl(var(--lemonchiffon))",
@@ -83,23 +86,6 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        },
-
-        dark: {
-          brownpurple: "hsl(var(--brownpurple))",
-          blueishpurple: "hsl(var(--blueishpurple))",
-          lightpurple: "hsl(var(--lightpurple))",
-          neonpurple: "hsl(var(--neonpurple))",
-          whiteout: "hsl(var(--whiteout))",
-          lemonchiffonlight: "var(--lemonchiffonlight)",
-          lemonchiffon: "hsl(var(--lemonchiffon))",
-          taupe: "hsl(var(--taupe))",
-          bistre: "hsl(var(--bistre))",
-          buff: "var(--buff)",
-          brownsugar: "hsl(var(--brownsugar))",
-          bittersweet: "hsl(var(--bittersweet))",
-          bittersweetlight: "var(--bittersweetlight)",
-          eerieblack: "hsl(var(--eerieblack))",
         },
       },
       borderRadius: {

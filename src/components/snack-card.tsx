@@ -23,19 +23,13 @@ interface SnackCardProps {
 const SnackCard: React.FC<SnackCardProps> = ({ id, name, image, details, plug }) => {
     const [isOpen, setIsOpen] = useState(false);
     // check screen size
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+    const [isDesktop, setIsDesktop] = useState(false); // SSR-safe: set in useEffect
 
     useEffect(() => {
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth > 768);
-        };
-
+        setIsDesktop(window.innerWidth > 768);
+        const handleResize = () => setIsDesktop(window.innerWidth > 768);
         window.addEventListener('resize', handleResize);
-
-        // Clean up event listener on component unmount
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const handleOpen = () => {
