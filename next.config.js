@@ -17,16 +17,10 @@ const withPWA = require("@ducanh2912/next-pwa").default({
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: false,
+    unoptimized: true,
   },
-  // Ensure trailing slashes are handled correctly
   trailingSlash: true,
-  // Disable server components for static export
-  experimental: {
-    appDir: true,
-  },
-  // Add basePath if deploying to a subdirectory
-  // basePath: '/your-repo-name',
+  // basePath: '/your-repo-name', // uncomment if deploying to a project page subdirectory
 };
 
 module.exports = withPWA(nextConfig);

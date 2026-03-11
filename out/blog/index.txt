@@ -1,0 +1,74 @@
+3:I[9275,[],""]
+4:I[1343,[],""]
+5:I[4361,["950","static/chunks/950-186ca58b693757cd.js","112","static/chunks/112-91109d180bc87cdc.js","231","static/chunks/231-9dc24df0feccf51e.js","25","static/chunks/25-550030b534b469a1.js","185","static/chunks/app/layout-f559280aeddaf27f.js"],"ApolloWrapper"]
+6:I[5433,["950","static/chunks/950-186ca58b693757cd.js","112","static/chunks/112-91109d180bc87cdc.js","231","static/chunks/231-9dc24df0feccf51e.js","25","static/chunks/25-550030b534b469a1.js","185","static/chunks/app/layout-f559280aeddaf27f.js"],"default"]
+7:I[6723,["950","static/chunks/950-186ca58b693757cd.js","112","static/chunks/112-91109d180bc87cdc.js","231","static/chunks/231-9dc24df0feccf51e.js","25","static/chunks/25-550030b534b469a1.js","185","static/chunks/app/layout-f559280aeddaf27f.js"],"default"]
+8:I[1422,["950","static/chunks/950-186ca58b693757cd.js","112","static/chunks/112-91109d180bc87cdc.js","231","static/chunks/231-9dc24df0feccf51e.js","25","static/chunks/25-550030b534b469a1.js","185","static/chunks/app/layout-f559280aeddaf27f.js"],"Toaster"]
+0:["QZllVqNcijratLo7VBzpL",[[["",{"children":["blog",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Monoton&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap","rel":"stylesheet"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Chokokutai&family=Dancing+Script:wght@400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=League+Spartan:wght@100..900&family=Monoton&family=Mynerve&family=Passion+One:wght@400;700;900&family=Pirata+One&family=Prata&family=Tiny5&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Yanone+Kaffeesatz:wght@200..700&display=swap","rel":"stylesheet"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Doto:wght@100..900&family=Mrs+Saint+Delafield&display=swap","rel":"stylesheet"}]]}],["$","body",null,{"className":"font-sans","children":["$","$L5",null,{"children":["$","main",null,{"className":"flex h-[100dvh] w-full bg-eerieblack md:p-2","children":[["$","div",null,{"className":"sm:hidden md:block flex-shrink-0","children":["$","$L6",null,{}]}],["$","div",null,{"className":"flex flex-col flex-1 min-w-0 bg-eerieblack overflow-y-auto","children":[["$","$L7",null,{}],["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}],["$","$L8",null,{}]]}]]}]}]}]]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/39b30b285931dff9.css","precedence":"next","crossOrigin":"$undefined"}]],"$L9"]]]]
+9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Tamukong Brian"}],["$","meta","3",{"name":"description","content":"Lets get to know each other"}],["$","link","4",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+1:null
+a:I[6662,["950","static/chunks/950-186ca58b693757cd.js","404","static/chunks/app/blog/page-c435fccfe4cd55be.js"],"default"]
+b:T10cd,<h3>Why I Started Building Chakap</h3>
+<p>I've always found it strange how quickly important moments seem to disappear.</p>
+<p>Not the moments themselves. Those stay with us in some invisible way. But the traces of them: the photos, the videos, the fragments people capture when something meaningful happens.</p>
+<p>Think about a wedding, a graduation, or a big conference. Hundreds of people might be there, phones out, cameras flashing, videos rolling. Each person records their own version of the same moment: different angles, different emotions, different stories.</p>
+<p>For a short while, those moments feel alive. Photos are shared in group chats, someone posts a highlight video, and a few images make it to social media.</p>
+<p>Then slowly, everything scatters. I understand life must go on, but it always felt like the memory of that moment should be more than just a few photos on someone's phone or a forgotten folder in the cloud.</p>
+<p>There might be pictures of you somewhere, smiling at a friend's wedding, that you never see. A video of your graduation that gets lost in a message thread. A photo from a conference that only the person next to you has.</p>
+<p>Some pictures remain on a phone that gets replaced two years later. Others linger in a forgotten cloud folder or disappear into endless message threads. The event itself was shared, but the memories become fragmented.</p>
+<hr>
+<h3>The Thought That Wouldn't Leave</h3>
+<p>At some point, I started asking a simple question:</p>
+<p>If an event brings people together physically, why don't we have a place where the digital memories stay together too?</p>
+<p>Right now, we store memories individually. My photos go into my gallery. Yours go into yours. The photographer sends a zip file somewhere. A few uploads reach social media.</p>
+<p>But an event isn't an individual experience. It's a collective one. Dozens or hundreds of people share the same moment, each holding a small piece of the story.</p>
+<p>What if those pieces could live together in one place?</p>
+<hr>
+<h3>Not Just Another Photo App</h3>
+<p>When Chakap first began to take shape in my mind, I wasn't imagining another social platform. We already have plenty of those.</p>
+<p>What interested me was something more intentional: the idea of events having their own digital home.</p>
+<p>Not a random folder. Not a temporary chat. But a shared space devoted to the memory itself.</p>
+<p>Imagine a wedding where every guest can add their photos to one common gallery. A graduation where students upload moments from the day. A conference where talks, photos, and videos sit together, all belonging to that specific event.</p>
+<p>Instead of fragments scattered across the internet, the memory stays anchored to the moment that created it.</p>
+<hr>
+<h3>The Shape of the Idea</h3>
+<p>The more I thought about it, the more it felt like events deserve their own kind of infrastructure.</p>
+<p>An event could have:</p>
+<ul>
+<li>A shared media gallery.</li>
+<li>Live streaming for those who couldn't attend.</li>
+<li>Photobooth captures that appear instantly.</li>
+<li>Attendee uploads from their phones.</li>
+<li>Curated highlights created afterward.</li>
+</ul>
+<p>And maybe, years later, someone revisits that event page and finds everything still there: not just the official footage, but everyone's perspective woven together into one story.</p>
+<hr>
+<h3>Why It Matters to Me</h3>
+<p>Some of the most meaningful moments in life happen only once: a graduation, a wedding, a milestone celebration.</p>
+<p>Those moments pass quickly, but the memories created around them can last decades. Still, we treat those memories almost casually, scattering them across platforms built for everything else.</p>
+<p>I kept wondering: what if we built something designed specifically to preserve those shared experiences?</p>
+<p>That curiosity eventually became Chakap.</p>
+<hr>
+<h3>Where It Might Go</h3>
+<p>Chakap is still evolving. Like any early idea, it's being shaped slowly piece by piece, feature by feature. But the vision behind it remains clear.</p>
+<p>Events should not vanish when they end. They should leave behind a place where the memory of that moment still lives, not as scattered fragments, but as a shared story.</p>
+<p>That is the idea I'm trying to build.</p>
+c:T476,<h1>The Things I Know</h1>
+<p>All I know is to work hard for what I have<br>
+My parents did that in offices densely packed and cubiculed bureaus<br>
+Their parents did it in fields and bushes under scorching suns and beating downpours</p>
+<p>All I know is to hold it in and work it out<br>
+My father did it all his life, and so did his father<br>
+Shoulder responsibility and brace on because it never is not for me</p>
+<p>All I know is to pray when it is beyond me<br>
+My mother taught me to do so every day, and so did her mother before she left for higher education.<br>
+On my knees with head abow and her hands on my head she blessed my every step<br>
+She prayed that the hands that worked stayed clean and fed</p>
+<p>All I know bewilders me, fills me with an inadequacy that consumes me<br>
+All I know annoys me, enrages me. Why can't you see what I see yet<br>
+All I know is staring through a window without looking at the door</p>
+<p>All I know is what I learned, flawed yet earnest<br>
+Prejudiced and sometimes proudly ignorant<br>
+All I know is not enough, it's the great lesson in humility<br>
+So forgive me for the things I know</p>
+2:["$","$La",null,{"posts":[{"slug":"chakap-a-work-in-progress","title":"Chakap: A work in Progress","date":"2026-03-01","displayDate":"March 2026","type":"article","contentHtml":"$b"},{"slug":"the-things-i-know","title":"The Things I Know","date":"2026-03-01","displayDate":"March 2026","type":"poem","contentHtml":"$c"}]}]
