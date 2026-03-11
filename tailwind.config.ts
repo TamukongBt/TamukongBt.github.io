@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 const config = {
   darkMode: "class",
@@ -26,7 +27,7 @@ const config = {
         heading: ["Bebas Neue", "sans-serif"],
         design: ["Yanone Kaffeesatz", "serif"],
         serif: ["Prata", "serif"],
-        script: ["Doto","sans-serif"],
+        script: ["Doto", "sans-serif"],
         cursive: ["Caesar Dressing", "cursive"],
         italic: ["Chokokutai", "cursive"],
         console: ["Ubuntu Mono", "monospace"],
@@ -109,7 +110,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;
 
 export default config;
